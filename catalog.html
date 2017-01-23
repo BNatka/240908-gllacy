@@ -10,12 +10,12 @@
   <!--размеры картинок произвольные-->
   <header class="main-header">
     <div class="container">
-      <img src="#" width="30" height="15" alt="Глейси">
+      <a href="index.html"><img src="#" width="30" height="15" alt="Глейси"></a>
     </div>
     <nav class="main-navigation">
       <ul>
         <li>
-          <a href="catalog.html">Каталог</a>
+          Каталог
         </li>
         <li>
           <a href="#">Доставка и оплата</a>
@@ -32,19 +32,175 @@
       <a class="login" href="#">Вход</a>
     </div>
     <div class="basket">
-      <a class="" href="#">Пусто</a>
+      <a class="basket-btn" href="#">Пусто</a>
     </div>
     <div class="schedule">
       <span class="schedule-time">С 10 до 20, ежедневно</span><br>
       <span class="schedule-phone">8 812 450-25-25</span>
     </div>
   </header>
-
-
-
-
-
-  <footer class="main-footer"> <!--Футкр без карты, неуверена, что изначально было верно
+  <main class="conteiner">
+    <div class="content-title">
+      <h1>Сливочное мороженое</h1>
+      <ul class="breadcrumbs">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="#">Каталог</a></li>
+        <li>Сливочное</li>
+      </ul>
+    </div>
+    <section class="filter">
+      <!--Фильтр/сортровщик-->
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div class="select">
+          <p>
+            Сортировка:
+          </p>
+          <select name="select">
+              <option value="По популярности">По популярности </option>
+               <option value="По цене"> По цене </option>
+          </select>
+        </div>
+        <div class="filter-price">
+          <!--ПОЛЗУНОК-->
+          <p>Цена:</p>
+          <input type="range" min="100" max="800" step="5" />
+        </div>
+        <fieldset class="filter-fat">
+          <!--ЖИРНОСТЬ-->
+          <legend>Жирность:</legend>
+          <div class="filter-fat-item">
+            <input type="checkbox" name="0%" id="filter-fat0">
+            <label for="filter-fat0">0 &#37;</label>
+          </div>
+          <div class="filter-fat-item">
+            <input type="checkbox" name="10%" id="filter-fat10" checked>
+            <label for="filter-fat10">до 10 &#37;</label>
+          </div>
+          <div class="filter-fat-item">
+            <input type="checkbox" name="до 30%" id="filter-fat30">
+            <label for="filter-fat30">до 30 &#37;</label>
+          </div>
+          <div class="filter-fat-item">
+            <input type="checkbox" name="выше 30%" id="filter-fat300">
+            <label for="filter-fat30">выше 30 &#37;</label>
+          </div>
+        </fieldset>
+        <fieldset class="filter-topping">
+          <!--Наполнитель-->
+          <legend>Наполнители:</legend>
+          <div class="filter-topping-item">
+            <input type="checkbox" name="шоколад" id="filter-topping1" checked>
+            <label for="filter-topping1">Шоколадные</label>
+          </div>
+          <div class="filter-topping-item">
+            <input type="checkbox" name="сахарные присыпки" id="filter-topping2">
+            <label for="filter-topping2">Сахарные присыпки</label>
+          </div>
+          <div class="filter-topping-item">
+            <input type="checkbox" name="фрукты" id="filter-topping3">
+            <label for="filter-topping3">Фрукты</label>
+          </div>
+          <div class="filter-topping-item">
+            <input type="checkbox" name="сиропы" id="filter-topping4">
+            <label for="filter-topping4">Сиропы</label>
+          </div>
+          <div class="filter-topping-item">
+            <input type="checkbox" name="джемы" id="filter-topping5">
+            <label for="filter-topping5">Джемы</label>
+          </div>
+        </fieldset>
+        <div class="buttons">
+          <input type="submit" value="Применить">
+        </div>
+      </form>
+    </section>
+    <section class="catalog">
+      <!--КАТАЛОГ КЛАСС ХИТОВ проверить-->
+      <article class="hits-item">
+        <img src="#" alt="мороженое" width="50" height="50">
+        <span class="hits-price">310р/кг</span>
+        <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+        <a class="btn" href="#">Быстрый просмотр</a>
+      </article>
+      <article class="hits-item">
+        <img src="#" alt="мороженое" width="50" height="50">
+        <span class="hits-price">380/кг</span>
+        <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+        <a class="btn" href="#">Быстрый просмотр</a>
+      </article>
+      <article class="hits-item">
+        <img src="#" alt="мороженое" width="50" height="50">
+        <span class="hits-price">355р/кг</span>
+        <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+        <a class="btn" href="#">Быстрый просмотр</a>
+      </article>
+      <article class="hits-item">
+        <img src="#" alt="мороженое" width="50" height="50">
+        <span class="hits-price">415р/кг</span>
+        <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+        <a class="btn" href="#">Быстрый просмотр</a>
+      </article>
+      <article class="hits-item">
+        <img src="#" alt="мороженое" width="50" height="50">
+        <span class="hits-price">325р/кг</span>
+        <a href="#">Сливочное с брусничным джемом</a>
+        <a class="btn" href="#">Быстрый просмотр</a>
+      </article>
+      <article class="hits-item">
+        <img src="#" alt="мороженое" width="50" height="50">
+        <span class="hits-price">410/кг</span>
+        <a href="#">Сливочно-черничное с цельными ягодами</a>
+        <a class="btn" href="#">Быстрый просмотр</a>
+      </article>
+      <article class="hits-item">
+        <img src="#" alt="мороженое" width="50" height="50">
+        <span class="hits-price">375р/кг</span>
+        <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
+        <a class="btn" href="#">Быстрый просмотр</a>
+      </article>
+      <article class="hits-item">
+        <img src="#" alt="мороженое" width="50" height="50">
+        <span class="hits-price">320р/кг</span>
+        <a href="#">Сливочное с щоколадной стружкой</a>
+        <a class="btn" href="#">Быстрый просмотр</a>
+      </article>
+      <article class="hits-item">
+        <img src="#" alt="мороженое" width="50" height="50">
+        <span class="hits-price">310р/кг</span>
+        <a href="#">Сливочно-ванильное с кусочками шоколада</a>
+        <a class="btn" href="#">Быстрый просмотр</a>
+      </article>
+      <article class="hits-item">
+        <img src="#" alt="мороженое" width="50" height="50">
+        <span class="hits-price">440/кг</span>
+        <a href="#">Сливочно с ментоловым сиропом</a>
+        <a class="btn" href="#">Быстрый просмотр</a>
+      </article>
+      <article class="hits-item">
+        <img src="#" alt="мороженое" width="50" height="50">
+        <span class="hits-price">435р/кг</span>
+        <a href="#">Сливочное с кусочками черного шоколада</a>
+        <a class="btn" href="#">Быстрый просмотр</a>
+      </article>
+      <article class="hits-item">
+        <img src="#" alt="мороженое" width="50" height="50">
+        <span class="hits-price">415р/кг</span>
+        <a href="#">Сливочное с мятным сиропом</a>
+        <a class="btn" href="#">Быстрый просмотр</a>
+      </article>
+    </section>
+    <div class="page">
+      <a class="page-btn-prev" href="#">Назад</a>
+      <a class="page-btn" href="#">1</a>
+      <a class="page-btn" href="#">2</a>
+      <a class="page-btn" href="#">3</a>
+      <a class="page-btn" href="#">4</a>
+      <a class="page-btn" href="#">5</a>
+      <a class="page-btn-next" href="#">Вперёд</a>
+    </div>
+  </main>
+  <footer class="main-footer">
+    <!--Футер без карты, неуверена, что изначально было верно
                                 Хотела карту растянуть на всю ширину-->
     <div class="container">
       <section class="footer-social">
@@ -69,3 +225,5 @@
       </section>
     </div>
   </footer>
+</body>
+</html>
