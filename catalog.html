@@ -7,7 +7,12 @@
 </head>
 
 <body>
+<<<<<<< HEAD
   <div class="site-wrapper"><!--размеры картинок произвольные-->
+=======
+
+  <div class="site-wrapper">
+>>>>>>> origin/master
   <header class="main-header">
     <div class="container">
       <a href="index.html"><img src="#" width="30" height="15" alt="Глейси"></a>
@@ -36,7 +41,7 @@
       <a class="search-btn" href="#">Поиск</a>
       <form action="https://echo.htmlacademy.ru" method="post">
         <label for="search"></label>
-        <input type="search" name="search" placeholder="Что ищем?">
+        <input type="search" name="search" placeholder="Что ищем?" id="search">
         <div class="buttons">
           <input type="submit" value="Поиск">
         </div>
@@ -58,7 +63,32 @@
     </div>
     <div class="basket">
       <a class="basket-btn" href="#">2 товара</a>
-      <!--Я даже не догадываюсь как сверстать полную корзину-:(-->
+      <!--Я даже не догадываюсь как сверстать полную корзину - ВАРИАНТ БЕЗУМИЯ!-:(-->
+      <div class="basket-full">
+        <table class="basket-full-1">
+  			<tr>
+  				<td> &#10006;</td>
+  				<td><img src="#" alt=""></td>
+          <td>Пломбир с апельсиновым джемом</td>
+  				<td>1,5 кг &#10006;</td>
+          <td><span class="">200 руб.</span></td>
+          <td>300 руб.</td>
+  			</tr>
+  			<tr>
+          <td> &#10006;</td>
+          <td><img src="#" alt=""></td>
+          <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+          <td>1,5 кг &#10006;</td>
+          <td><span class="">300 руб.</span></td>
+          <td>450 руб.</td>
+  			</tr>
+  		</table>
+      <hr>
+      <span>Итого: 750 руб.</span>
+      <div class="buttons">
+          <a href="#">Оформить заказ</a>
+      </div>
+      </div>
     </div>
     <div class="schedule">
       <span class="schedule-time">С 10 до 20, ежедневно</span><br>
@@ -78,18 +108,37 @@
       <!--Фильтр/сортровщик-->
       <form action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="select">
+<<<<<<< HEAD
           <p>
             Сортировка:
           </p>
+=======
+          <legend>Сортировка:</legend>
+>>>>>>> origin/master
           <select name="select">
               <option value="По популярности">По популярности </option>
-               <option value="По цене"> По цене </option>
+              <option value="По цене"> По цене </option>
           </select>
         </fieldset>
+<<<<<<< HEAD
         <fieldset class="filter-price"> <!--Не уверена, что именно это ты имел ввиду-->
           <!--ПОЛЗУНОК-->
           <label for="price">Цена:</label>
           <input type="range" min="100" max="800" step="5" id="price">
+=======
+        <fieldset class="filter-price">
+          <!--ПОЛЗУНОК - это будет просто картинка получается? (судя по головоломке?)-->
+          <legend>Цена: 100 руб. – 500 руб.</legend>
+          <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle min-toggle"></div>
+                <div class="toggle max-toggle"></div>
+          </div>
+          <!--<label for="price">Цена:</label>
+          <input type="range" min="100" max="800" step="5" id="price">-->
+>>>>>>> origin/master
         </fieldset>
         <fieldset class="filter-fat">
           <!--ЖИРНОСТЬ-->
