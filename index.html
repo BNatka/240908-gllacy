@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -12,10 +13,9 @@
   <input type="radio" name="slider" id="slider-input-3">
   <div class="site-wrapper">
     <!--КОНТЕЙНЕР-->
-    <!--размеры картинок произвольные-->
     <header class="main-header">
       <div class="container">
-        <img src="#" width="30" height="15" alt="Глейси">
+        <img src="img/Logo.png" width="154" height="64" alt="Глейси">
       </div>
       <nav class="main-navigation">
         <ul>
@@ -41,7 +41,7 @@
         <a class="search-btn" href="#">Поиск</a>
         <form action="https://echo.htmlacademy.ru" method="post">
           <label for="search"></label>
-          <input type="search" name="search" placeholder="Что ищем?" id="search"> 
+          <input type="search" name="search" placeholder="Что ищем?" id="search">
           <div class="buttons">
             <input type="submit" value="Поиск">
           </div>
@@ -74,19 +74,20 @@
       <section class="slider">
         <div class="slider-box">
             <div class="slider-block1">
+              <!--Есть подозрение, что подсветка объединяется не с мороженым, а с фоном...
+               Я думала, что фон будет задан цветом в css-->
               <p>Крем-брюле и пломбир с малиновым джемом</p>
-              <img src="#" alt="Мороженое" width="100" height="100">
+              <img src="img/ice-1.png" alt="Мороженое" width="1045" height="881">
               <a class="slider-btn" href="#">Дайте оба!</a>
             </div>
-            <!--каким-то образом они прячутся :)-->
             <div class="slider-block2">
               <p>Шоколадный пломбир и лимонный сорбет</p>
-              <img src="#" alt="Мороженое" width="100" height="100">
+              <img src="img/ice-2.png" alt="Мороженое" width="1065" height="859">
               <a class="slider-btn" href="#">Дайте оба!</a>
             </div>
             <div class="slider-block3">
               <p>Пломбир с помадкой и клубничный щербет</p>
-              <img src="#" alt="Мороженое" width="100" height="100">
+              <img src="img/ice-3.png" alt="Мороженое" width="1079" height="854">
               <a class="slider-btn" href="#">Дайте оба!</a>
             </div>
           <div class="slider-controls">
@@ -99,12 +100,12 @@
       <section class="promotion">
         <!--АКЦИИ-->
         <div class="promotion-left">
-          <h2>Малинка даром!</h2>
+          <h1>Малинка даром!</h1> <!--один размер с заголовком в каталоге-->
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
           <a class="btn" href="#">Хочу варенье!</a>
         </div>
         <div class="promotion-right">
-          <h2>Шоколадки даром!</h2>
+          <h1>Шоколадки даром!</h1> <!--один размер с заголовком в каталоге-->
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
           <a class="btn" href="#">Хочу шоколадки!</a>
         </div>
@@ -112,25 +113,25 @@
       <section class="hits">
         <!--ХИТЫ-->
         <article class="hits-item">
-          <img src="#" alt="мороженое" width="50" height="50">
+          <img src="img/1-310.jpg" alt="мороженое" width="267" height="267">
           <span class="hits-price">310р/кг</span>
           <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           <a class="btn" href="#">Быстрый просмотр</a>
         </article>
         <article class="hits-item">
-          <img src="#" alt="мороженое" width="50" height="50">
+          <img src="img/2-380.jpg" alt="мороженое" width="267" height="267">
           <span class="hits-price">380р/кг</span>
           <a href="#">Сливочно-кофейное с кусочками шоколада</a>
           <a class="btn" href="#">Быстрый просмотр</a>
         </article>
         <article class="hits-item">
-          <img src="#" alt="мороженое" width="50" height="50">
+          <img src="img/3-355.jpg" alt="мороженое" width="267" height="267">
           <span class="hits-price">355р/кг</span>
           <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
           <a class="btn" href="#">Быстрый просмотр</a>
         </article>
         <article class="hits-item">
-          <img src="#" alt="мороженое" width="50" height="50">
+          <img src="img/4-415.jpg" alt="мороженое" width="267" height="267">
           <span class="hits-price">415р/кг</span>
           <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
           <a class="btn" href="#">Быстрый просмотр</a>
@@ -138,7 +139,7 @@
       </section>
       <section class="features">
         <!--ОСОБЕННОСТИ-->
-        <h3>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на разновес</h3>
+        <h2>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на разновес</h2>
         <ul>
           <li class="features-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
           <li class="features-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
@@ -166,13 +167,27 @@
     <footer class="main-footer">
       <section class="map">
         <!--КАРТА и АДРЕСС-->
-        <img src="#" alt="Карта" width="500" height="400">
+        <img src="img/map.jpg" alt="Карта" width="1200" height="430">
         <div class="address">
           <p>Адрес главного офиса<br> и офлайн магазина:<br>
             <span class="address-bold">ул. Большая Конюшенная<br>
   19/8, Санкт-Петербург</span><br><br> Для заказов по телефону:<br>
             <span class="address-bold">8 812 450-25-25</span><br> (с 10 до 20 ежедневно)</p>
           <a class="btn" href="#">Форма обратной связи</a>
+          <!--В фотошопе увидела форму, это дополнительные требования?-->
+          <fieldset class="feedback">
+          <legend>
+            Мы обязательно вам ответим!
+          </legend>
+          <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+            <input type="text" name="login" placeholder="Как вас зовут?">
+            <input type="email" name="email" placeholder="Ваша почта для ответа?">
+            <textarea type="text" name="comment">Напишите что-нибудь...</textarea>
+            <div class="buttons">
+              <input type="submit" value="Отправить">
+            </div>
+          </form>
+          </fieldset>
         </div>
       </section>
       <div class="container">
@@ -189,7 +204,7 @@
           <a class="about-simple" href="#">Экологические стандарты</a>
         </section>
         <section class="footer-copyright">
-          <img src="#" alt="Htmlacademy.ru" width="20" height="10">
+          <img src="img/logo-htmlacademy.png" alt="Htmlacademy.ru" width="108" height="38">
           <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &#64;2016</p>
         </section>
       </div>
