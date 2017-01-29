@@ -36,6 +36,10 @@ h2 {
   padding-right: 27px;
 }
 
+.main-header {
+  min-height: 115px;
+}
+
 .logo {
   float: left;
   width: 155px;
@@ -50,10 +54,18 @@ h2 {
   margin-right: 25px;
 }
 
+.active-menu {
+  display: none;
+}
+
 .search {
   float: left;
   width: 34px;
   margin-right: 10px;
+}
+
+.search-form {
+  display: none;
 }
 
 .user-block {
@@ -62,15 +74,64 @@ h2 {
   margin-right: 10px;
 }
 
+.login-form {
+  display: none;
+}
+
 .basket {
   float: right;
   width: 118px;
 }
 
+.basket-full {
+  display: none;
+}
+
+.breadcrumbs {
+  float: left;
+  width: 220px;
+  margin-right: 755px;
+}
+
 .schedule {
-  clear: both;
+  float: right;
   width: 165px;
-  margin-left: 980px;
+  margin-top: 16px;
+}
+
+.filter {
+  width: 1146px;
+  margin-bottom: 40px;
+}
+
+.select {
+  float: left;
+  width: 193px;
+  margin-right: 15px;
+}
+
+.filter-price {
+  float: left;
+  width: 220px;
+  margin-right: 15px;
+}
+
+.filter-fat {
+  float: left;
+  width: 417px;
+  margin-right: 0px;
+}
+
+.filter-topping {
+  float: left;
+  width: 703px;
+  margin-right: 15px;
+}
+
+.filter-button {
+  float: left;
+  width: 145px;
+  margin-right: 0px;
 }
 
 
@@ -81,6 +142,14 @@ h2 {
 .slider-box {}
 
 .slider-controls {}
+
+.slider-block2 {
+  display: none;
+}
+
+.slider-block3 {
+  display: none;
+}
 
 
 /*---------------------------------*/
@@ -100,17 +169,24 @@ h2 {
   width: 560px;
 }
 
+.catalog {
+  margin-bottom: 75px;
+  font-size: 0;
+}
+
 .hits {
-  margin-bottom: 30px;
+  font-size: 0;
 }
 
 .hits-item {
-  float: left;
+  display: inline-block;
+  vertical-align: top;
   width: 267px;
   margin-right: 26px;
+  margin-bottom: 30px;
 }
 
-.hits-item:last-child {
+.hits-item:nth-child(4n) {
   margin-right: 0;
 }
 
@@ -137,6 +213,20 @@ h2 {
   width: 1200px;
   margin: 0 auto;
   margin-bottom: 15px;
+}
+
+.address {
+  display: none;
+}
+
+.page {
+  width: 190px;
+  float: right;
+  margin-bottom: 30px;
+}
+
+.feedback {
+  display: none;
 }
 
 .footer-social {
