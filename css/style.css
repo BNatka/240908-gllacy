@@ -142,6 +142,10 @@ h2 {
   margin-bottom: 40px;
 }
 
+fieldset {
+  border: none;
+}
+
 .select {
   float: left;
   width: 193px;
