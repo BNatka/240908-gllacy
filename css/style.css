@@ -160,16 +160,25 @@ h2 {
   margin-right: 0px;
 }
 
+.filter-fat-item {
+  display: inline-block;
+}
+
 .filter-topping {
   float: left;
   width: 703px;
   margin-right: 15px;
 }
 
+.filter-topping-item {
+  display: inline-block;
+}
+
 .filter-button {
   float: left;
   width: 145px;
   margin-right: 0px;
+  margin-top: 40px;
 }
 
 
