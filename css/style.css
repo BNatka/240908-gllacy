@@ -50,8 +50,24 @@ h2 {
 .main-navigation {
   float: left;
   width: 675px;
-  min-height: 90px;
   margin-right: 25px;
+  margin-top: 20px;
+}
+
+.main-navigation ul {
+  padding: 0;
+  margin: 0;
+}
+
+.main-navigation li {
+  display: inline-block;
+  list-style: none;
+}
+
+.main-navigation a {
+  display: block;
+  color: #ffffff;
+  margin-right: 30px;
 }
 
 .active-menu {
@@ -62,6 +78,7 @@ h2 {
   float: left;
   width: 34px;
   margin-right: 10px;
+  margin-top: 20px;
 }
 
 .search-form {
@@ -72,6 +89,7 @@ h2 {
   float: left;
   width: 93px;
   margin-right: 10px;
+  margin-top: 20px;
 }
 
 .login-form {
@@ -81,6 +99,8 @@ h2 {
 .basket {
   float: right;
   width: 118px;
+  margin-top: 20px;
+  text-align: right;
 }
 
 .basket-full {
@@ -89,14 +109,32 @@ h2 {
 
 .breadcrumbs {
   float: left;
-  width: 220px;
-  margin-right: 755px;
+  width: 850px;
+  margin-top: 25px;
+  margin-right: 0px;
+}
+
+.breadcrumbs ul {
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumbs li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 20px;
+}
+
+.breadcrumbs a {
+  display: block;
+  color: #ffffff;
 }
 
 .schedule {
   float: right;
   width: 165px;
-  margin-top: 16px;
+  margin-top: 25px;
+  text-align: right;
 }
 
 .filter {
@@ -184,6 +222,12 @@ h2 {
   width: 267px;
   margin-right: 26px;
   margin-bottom: 30px;
+  text-align: center;
+}
+
+.hits-item a {
+  font-size: 16px;
+  color: #ffffff;
 }
 
 .hits-item:nth-child(4n) {
