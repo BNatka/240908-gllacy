@@ -1,5 +1,5 @@
 body {
-  min-width: 900px;
+  min-width: 1200px;
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
@@ -45,34 +45,87 @@ h2 {
   float: left;
   width: 155px;
   height: 64px;
-  margin-right: 10px;
+  margin-right: 9px;
 }
 
 .main-navigation {
   float: left;
   width: 675px;
   margin-right: 25px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .main-navigation ul {
   padding: 0;
   margin: 0;
+  font-size: 0;
 }
 
 .main-navigation li {
+  position: relative;
   display: inline-block;
+  vertical-align: top;
   list-style: none;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
 }
 
 .main-navigation a {
   display: block;
   color: #ffffff;
-  margin-right: 30px;
+  padding: 10px 14px;
+}
+
+.main-navigation a:hover {
+  background-color: #f7f6f3;
+  color: #333333;
+}
+
+.main-navigation li:hover .active-menu {
+  display: block;
+}
+
+.active {
+  color: #ffffff; /*элемент блочный, цвет не работает */
+  background-color: #d07058;
 }
 
 .active-menu {
+  position: absolute;
+  top: 40px;
   display: none;
+  z-index: 10;
+  list-style: none;
+  width: 143px;
+  margin: 0;
+  padding: 0 5px;
+  background-color: #f8f7f4;
+}
+
+.active-menu li {
+  display: block;
+}
+/*Как сделать нижнее подчеркивание с отступом в 5px?*/
+
+.active-menu li:first-child {
+  border-bottom: 1px solid #d1d0ce;
+  padding-bottom: 2px;
+}
+
+.active-menu a {
+  display: block;
+  text-align: left;
+  padding: 10px 15px;
+  color: #323232;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.active-menu a:hover {
+  background-color: #fbded7;
 }
 
 .search {
@@ -133,9 +186,20 @@ h2 {
 
 .schedule {
   float: right;
-  width: 165px;
+  width: 170px;
   margin-top: 25px;
   text-align: right;
+}
+.schedule-time {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+.schedule-phone {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: bold;
 }
 
 .filter {
@@ -213,12 +277,20 @@ fieldset {
 .promotion-left {
   float: left;
   width: 560px;
+  height: 229px;
   margin-right: 26px;
+  background:  #c80036 url("../img/bg-raspberry.jpg") no-repeat;
+}
+
+.promotion-content {
+  
 }
 
 .promotion-right {
   float: right;
   width: 560px;
+  height: 229px;
+  background: #5d3923 url("../img/bg-chocolate.jpg") no-repeat;
 }
 
 .catalog {
@@ -250,17 +322,26 @@ fieldset {
 
 .features {
   margin-bottom: 30px;
+  width: 1146px;
+  height: 306px;
+  background: #ede2c8 url("../img/Bg-vaffel.jpg");
 }
 
 .news-left {
   float: left;
   width: 560px;
+  height: 220px;
   margin-right: 26px;
+  background: #ffffff url("../img/bg-strawberry.jpg");
+  color: #323232;
 }
 
 .news-right {
   float: right;
   width: 560px;
+  height: 220px;
+  background: #f8f7f4 url("../img/bg-post.jpg");
+  color: #323232;
 }
 
 .main-footer {
