@@ -64,6 +64,7 @@ h2 {
 .main-navigation li {
   position: relative;
   display: inline-block;
+  padding-bottom: 5px;
   vertical-align: top;
   list-style: none;
   font-size: 16px;
@@ -93,7 +94,8 @@ h2 {
 
 .active-menu {
   position: absolute;
-  top: 40px;
+  top: 42px;
+  left:-5px;
   display: none;
   z-index: 10;
   list-style: none;
@@ -133,9 +135,21 @@ h2 {
   margin-left: 20px;
   margin-right: 10px;
   margin-top: 10px;
-  position: relative;
+  padding-bottom: 5px;
 }
-.search::before {
+
+.search-btn {
+  display:inline-block;
+  position: relative;
+  vertical-align: top;
+  width: 33px;
+  min-height: 33px;
+  font-size: 0;
+  background-color: #f8f7f4;
+  opacity: 0.2;
+
+}
+.search-btn::before {
   content: "";
   display: block;
   background: url("../img/spritesheet.png") no-repeat;
@@ -148,21 +162,9 @@ h2 {
   transform: translate(-50%, -50%);
 }
 
-.search:hover::before {
-  background-position: -5px -504px;
-}
-
-.search-btn {
-  display:inline-block;
-  vertical-align: top;
-  width: 33px;
-  min-height: 33px;
-  font-size: 0;
-  background-color: #f8f7f4;
-  opacity: 0.2;
-}
-.search-btn:hover {
+.search-btn:hover::before, .search-btn:hover {
   opacity: 1;
+  background-position: -5px -504px;
 }
 
 .search-form {
@@ -171,14 +173,27 @@ h2 {
 
 .user-block {
   float: left;
-  display: block;
   margin-right: 10px;
   margin-top: 10px;
-  position: relative;
-  border: 1px solid black;
+  padding-bottom: 5px;
 }
 
-.user-block::before {
+.login {
+  display:inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 60px;
+  padding: 10px 16px;
+  opacity: 0.2;
+  background-color: #f8f7f4;
+  /*почему не вижу текст не могу его выровнять?*/
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  color: #ffffff;
+  text-decoration: none;
+}
+.login::before {
   content: "";
   position: absolute;
   top: 6px;
@@ -188,16 +203,29 @@ h2 {
   height: 19px;
   background-position: -5px -531px;
 }
-
-.user-block:hover::before {
-  background-position: -5px -560px;
+.login:hover,.login:hover::before {
+opacity: 1;
+color: #323232;
+background-position: -5px -560px;
 }
 
-.login {
-  display:block;
-  width: 60px;
-  min-height: 20px;
-  padding: 6px 16px;
+.login-form {
+  display: none;
+}
+
+.basket {
+  float: right;
+  width: 117px;
+  margin-top: 10px;
+  text-align: right;
+}
+
+.basket-btn {
+  display:inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 80px;
+  padding: 10px 16px;
   opacity: 0.2;
   background-color: #f8f7f4;
   /*почему не вижу текст не могу его выровнять?*/
@@ -208,20 +236,21 @@ h2 {
   text-decoration: none;
 }
 
-.login:hover {
-opacity: 1;
-color: #323232;
+.basket-btn::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 15px;
+  background: url("../img/spritesheet.png") no-repeat;
+  width: 21px;
+   height: 20px;
+   background-position: -5px -32px;
 }
 
-.login-form {
-  display: none;
-}
-
-.basket {
-  float: right;
-  width: 118px;
-  margin-top: 10px;
-  text-align: right;
+.basket-btn:hover, .basket-btn:hover::before {
+  opacity: 1;
+  color: #323232;
+   background-position: -5px -62px;
 }
 
 .basket-full {
@@ -254,7 +283,7 @@ color: #323232;
 .schedule {
   float: right;
   width: 170px;
-  margin-top: 25px;
+  margin-top: 10px;
   text-align: right;
 }
 .schedule-time {
