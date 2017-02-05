@@ -106,7 +106,7 @@ h2 {
 .active-menu li {
   display: block;
 }
-/*Как сделать нижнее подчеркивание с отступом в 5px?*/
+/*Как сделать нижнее подчеркивание(бордер) с отступом в 5px?*/
 
 .active-menu li:first-child {
   border-bottom: 1px solid #d1d0ce;
@@ -130,9 +130,39 @@ h2 {
 
 .search {
   float: left;
-  width: 34px;
+  margin-left: 20px;
   margin-right: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
+  position: relative;
+}
+.search::before {
+  content: "";
+  display: block;
+  background: url("../img/spritesheet.png") no-repeat;
+  width: 17px;
+  height: 17px;
+  background-position: -5px -477px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search:hover::before {
+  background-position: -5px -504px;
+}
+
+.search-btn {
+  display:inline-block;
+  vertical-align: top;
+  width: 33px;
+  min-height: 33px;
+  font-size: 0;
+  background-color: #f8f7f4;
+  opacity: 0.2;
+}
+.search-btn:hover {
+  opacity: 1;
 }
 
 .search-form {
@@ -141,9 +171,46 @@ h2 {
 
 .user-block {
   float: left;
-  width: 93px;
+  display: block;
   margin-right: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
+  position: relative;
+  border: 1px solid black;
+}
+
+.user-block::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 15px;
+  background: url("../img/spritesheet.png") no-repeat;
+  width: 21px;
+  height: 19px;
+  background-position: -5px -531px;
+}
+
+.user-block:hover::before {
+  background-position: -5px -560px;
+}
+
+.login {
+  display:block;
+  width: 60px;
+  min-height: 20px;
+  padding: 6px 16px;
+  opacity: 0.2;
+  background-color: #f8f7f4;
+  /*почему не вижу текст не могу его выровнять?*/
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.login:hover {
+opacity: 1;
+color: #323232;
 }
 
 .login-form {
@@ -153,7 +220,7 @@ h2 {
 .basket {
   float: right;
   width: 118px;
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: right;
 }
 
@@ -283,7 +350,7 @@ fieldset {
 }
 
 .promotion-content {
-  
+
 }
 
 .promotion-right {
