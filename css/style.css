@@ -76,6 +76,7 @@ h2 {
   display: block;
   color: #ffffff;
   padding: 7px 14px;
+  border-radius: 50px;
 }
 
 .main-navigation a:hover {
@@ -93,35 +94,33 @@ h2 {
   background-color: #d07058;
 }
 
+.active-menu a {
+  border-radius: 0;
+}
+
 .active-menu {
   position: absolute;
   top: 38px;
   left: -5px;
-  display: none;
-  z-index: 10;
+  display: block;
+  z-index: 2;
   list-style: none;
   width: 143px;
   margin: 0;
-  padding: 0 5px;
   background-color: #f8f7f4;
-}
+  border-radius: 5px;
+  }
 
 .active-menu li {
   display: block;
-}
-
-
-/*Как сделать нижнее подчеркивание(бордер) с отступом в 5px?*/
-
-.active-menu li:first-child {
-  border-bottom: 1px solid #d1d0ce;
-  padding-bottom: 2px;
+  padding: 0;
+  margin: 0;
 }
 
 .active-menu a {
   display: block;
-  text-align: left;
-  padding: 10px 15px;
+  padding-left: 20px;
+  margin: 4px 0;
   color: #323232;
   text-decoration: none;
   font-weight: normal;
@@ -137,8 +136,8 @@ h2 {
   float: left;
   margin-left: 22px;
   margin-right: 10px;
-  margin-top: 20px;
-  padding-bottom: 5px;
+  margin-top: 19px;
+
 }
 
 .search-btn {
@@ -149,6 +148,7 @@ h2 {
   min-height: 33px;
   font-size: 0;
   background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
 }
 
 .search-btn::before {
@@ -185,20 +185,20 @@ h2 {
   vertical-align: top;
   position: relative;
   width: 60px;
-  padding: 10px 16px;
+  padding: 8px 16px;
   background-color: rgba(255, 255, 255, 0.2);
-  /*почему не вижу текст не могу его выровнять?*/
   font-size: 14px;
   line-height: 16px;
   text-align: right;
   color: #ffffff;
   text-decoration: none;
+  border-radius: 50px;
 }
 
 .login::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 7px;
   left: 16px;
   background: url("../img/spritesheet.png") no-repeat;
   width: 21px;
@@ -228,22 +228,21 @@ h2 {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  width: 60px;
-  padding: 10px 16px;
+  padding: 8px 33px;
   padding-left: 43px;
   background-color: rgba(255, 255, 255, 0.2);
-  /*почему не вижу текст не могу его выровнять?*/
   font-size: 14px;
   line-height: 16px;
-  text-align: left;
+  text-align: center;
   color: #ffffff;
   text-decoration: none;
+  border-radius: 50px;
 }
 
 .basket-btn::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 7px;
   left: 16px;
   background: url("../img/spritesheet.png") no-repeat;
   width: 21px;
