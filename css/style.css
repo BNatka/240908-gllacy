@@ -180,7 +180,7 @@ h2 {
   background: url("../img/spritesheet.png") no-repeat;
   width: 17px;
   height: 17px;
-  background-position: -5px -477px;
+  background-position: -239px -161px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -189,7 +189,7 @@ h2 {
 
 .search-btn:hover::before, .search-btn:hover {
   opacity: 1;
-  background-position: -5px -504px;
+  background-position: -266px -161px;
 }
 
 .search-form {
@@ -226,13 +226,13 @@ h2 {
   background: url("../img/spritesheet.png") no-repeat;
   width: 21px;
   height: 19px;
-  background-position: -5px -531px;
+  background-position: -5px -188px;
 }
 
 .login:hover, .login:hover::before {
   opacity: 1;
   color: #323232;
-  background-position: -5px -560px;
+  background-position: -36px -188px;
 }
 
 .login-form {
@@ -272,13 +272,13 @@ h2 {
   background: url("../img/spritesheet.png") no-repeat;
   width: 21px;
   height: 20px;
-  background-position: -5px -32px;
+  background-position: -197px -5px;
 }
 
 .basket-btn:hover, .basket-btn:hover::before {
   opacity: 1;
   color: #323232;
-  background-position: -5px -62px;
+  background-position: -228px -5px;
 }
 
 .basket-full {
@@ -521,7 +521,8 @@ fieldset {
 .hit::before {
   content: "";
   position: absolute;
-  background: url("../img/hit.png") no-repeat;
+  background: url("../img/spritesheet.png") no-repeat;
+  background-position: -169px -35px;
   width: 61px;
   height: 61px;
   top: 0;
@@ -612,19 +613,19 @@ fieldset {
 }
 
 .features-item.ice::before {
-  background-position: -5px -216px;
+  background-position: -63px -106px;
 }
 
 .features-item.leaf::before {
-  background-position: -5px -317px;
+  background-position: -122px -106px;
 }
 
 .features-item.cow::before {
-  background-position: -5px -92px;
+  background-position: -5px -106px;
 }
 
 .features-item.temp::before {
-  background-position: -5px -376px;
+  background-position: -181px -106px;
 }
 
 .news-left {
@@ -698,27 +699,111 @@ fieldset {
 .footer-social {
   float: left;
   width: 267px;
+  margin-top: 15px;
   margin-right: 26px;
+  outline: 1px solid yellow;
 }
 
-/*.social-btn {
+/*размер кнопок не совпадает с макетом... 35 с бордером.
+в макете 38. Ошибка?*/
+
+.social-btn {
   display: inline-block;
   vertical-align: top;
-  width: 38px;
-  height: 38px;
-  margin-right: 10px;
   font-size: 0;
-}*/
+  margin-right: 8px;
+  font-size: 0;
+  width: 32px;
+  height: 32px;
+  background: url("../img/spritesheet.png") no-repeat;
+  opacity: 0.8;
+  border: 3px solid #c2cec7;
+  border-radius: 50%;
+  position: relative;
+}
+.social-btn:hover {
+  opacity: 1;
+}
+
+.social-btn:active {
+  box-shadow: inset 0 2px 0 1px #888888;
+}
+.social-btn-tw:hover {
+  background-position: -5px -589px;
+}
+.social-btn-tw {
+  background-position: -293px -157px;
+}
+
+.social-btn-inst {
+  background-position: -240px -77px;
+}
+
+.social-btn-fb {
+  background-position: -240px -35px;
+}
+
+.social-btn-vk {
+  background-position: -239px -119px;
+}
+
 
 .footer-about {
   float: left;
-  width: 560px;
+  width: 360px;
   margin-right: 26px;
+  margin-top: 15px;
+  padding-left: 100px;
+  padding-right: 100px;
+  outline: 1px solid yellow;
 }
 
+.about-simple {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  position: relative;
+  font-size: 0;
+  padding-left: 20px;
+  margin-right: 10px;
 
+}
+
+.heart::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url("../img/spritesheet.png") no-repeat;
+  width: 15px;
+  height: 13px;
+  background-position: -259px -5px;
+  top: 3px;
+  left: 0;
+}
+
+.about-simple:nth-child(2n) {
+  margin-right: 0;
+}
+
+.footer-about a {
+  font-size: 13px;
+  line-height: 18px;
+  color: #ffffff;
+  /*outline: 1px solid red;*/
+
+}
+
+.footer-about a:first-child {
+  font-weight: bold;
+}
 
 .footer-copyright {
-  float: left;
+  float: right;
   width: 267px;
+  outline: 1px solid yellow;
+}
+
+.footer-copyright img {
+  display: inline-block;
+  vertical-align: top;
 }
