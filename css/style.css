@@ -728,9 +728,7 @@ fieldset {
 .social-btn:active {
   box-shadow: inset 0 2px 0 1px #888888;
 }
-.social-btn-tw:hover {
-  background-position: -5px -589px;
-}
+
 .social-btn-tw {
   background-position: -293px -157px;
 }
