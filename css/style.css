@@ -34,6 +34,7 @@ h2 {
   margin: 0 auto;
   padding-left: 27px;
   padding-right: 27px;
+  /*outline: 1px solid black;*/
 }
 
 .main-header {
@@ -82,33 +83,34 @@ h2 {
 .main-navigation a:hover {
   background-color: #f7f6f3;
   color: #333333;
+  text-decoration: none;
 }
+
+.main-navigation a:active {
+  box-shadow: inset 0 2px 2px 0 #696969;
+}
+
+
 
 .main-navigation li:hover .active-menu {
   display: block;
 }
 
-.active {
-  color: #ffffff;
-  /*элемент блочный, цвет не работает */
-  background-color: #d07058;
-}
-
-.active-menu a {
-  border-radius: 0;
-}
+/*саб меню не могу подогнать к pixel perfect
+и полоску тоже ,м.б. это псевдоэлемент?*/
 
 .active-menu {
   position: absolute;
   top: 38px;
   left: -5px;
-  display: block;
+  display: none;
   z-index: 2;
   list-style: none;
   width: 143px;
   margin: 0;
   background-color: #f8f7f4;
   border-radius: 5px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   }
 
 .active-menu li {
@@ -116,11 +118,13 @@ h2 {
   padding: 0;
   margin: 0;
 }
-
+.active-menu li:first-child {
+  padding-bottom: 4px;
+}
 .active-menu a {
   display: block;
   padding-left: 20px;
-  margin: 4px 0;
+  margin: 2px 0;
   color: #323232;
   text-decoration: none;
   font-weight: normal;
@@ -128,16 +132,35 @@ h2 {
   line-height: 16px;
 }
 
+.active-menu a {
+  border-radius: 0;
+}
+
 .active-menu a:hover {
   background-color: #fbded7;
 }
 
+.active-menu a:active {
+  background-color: #f6b5a5;
+  box-shadow: none;
+}
+
+.new {
+  font-weight: bold;
+}
+
+ .active {
+  color: #ffffff;
+  /* цвет не работает в саб меню*/
+  background-color: #d07058;
+}
+
 .search {
   float: left;
-  margin-left: 22px;
+  margin-left: 23px;
   margin-right: 10px;
   margin-top: 19px;
-
+  /*outline: 1px solid yellow;*/
 }
 
 .search-btn {
@@ -175,9 +198,9 @@ h2 {
 
 .user-block {
   float: left;
-  margin-right: 10px;
+  margin-right: 8px;
   margin-top: 20px;
-  padding-bottom: 5px;
+  /*outline: 1px solid yellow;*/
 }
 
 .login {
@@ -198,7 +221,7 @@ h2 {
 .login::before {
   content: "";
   position: absolute;
-  top: 7px;
+  top: 6px;
   left: 16px;
   background: url("../img/spritesheet.png") no-repeat;
   width: 21px;
@@ -222,18 +245,20 @@ h2 {
   margin-top: 20px;
   margin-right: 0;
   text-align: right;
+  /*outline: 1px solid yellow;*/
 }
 
 .basket-btn {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  padding: 8px 33px;
-  padding-left: 43px;
+  width: 59px;
+  padding: 8px 12px;
+  padding-left: 47px;
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 14px;
   line-height: 16px;
-  text-align: center;
+  text-align: left;
   color: #ffffff;
   text-decoration: none;
   border-radius: 50px;
@@ -242,8 +267,8 @@ h2 {
 .basket-btn::before {
   content: "";
   position: absolute;
-  top: 7px;
-  left: 16px;
+  top: 6px;
+  left: 18px;
   background: url("../img/spritesheet.png") no-repeat;
   width: 21px;
   height: 20px;
@@ -263,8 +288,10 @@ h2 {
 .breadcrumbs {
   float: left;
   width: 850px;
-  margin-top: 25px;
+  margin-top: 20px;
   margin-right: 0px;
+  margin-bottom: 5px;
+  /*outline: 1px solid white;*/
 }
 
 .breadcrumbs ul {
@@ -275,31 +302,37 @@ h2 {
 .breadcrumbs li {
   display: inline-block;
   list-style: none;
-  margin-right: 20px;
+  margin-right: 3px;
 }
 
 .breadcrumbs a {
   display: block;
   color: #ffffff;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .schedule {
   float: right;
   width: 170px;
-  margin-top: 10px;
+  margin-top: 18px;
   text-align: right;
+  /*outline: 1px solid yellow;*/
 }
 
 .schedule-time {
   font-size: 14px;
   line-height: 16px;
   font-weight: bold;
+  /*outline: 1px solid white;*/
 }
-
+/*не сходится*/
 .schedule-phone {
+  margin-top: 5px;
   font-size: 22px;
   line-height: 24px;
   font-weight: bold;
+  /*outline: 1px solid white;*/
 }
 
 .filter {
@@ -387,6 +420,7 @@ fieldset {
   padding-right: 20px;
   padding-left: 20px;
   padding-top: 17px;
+  border-radius: 15px;
 }
 
 .promotion-left p {
@@ -421,8 +455,8 @@ fieldset {
 
 .promotion .btn {
   position: absolute;
-  bottom: 25px;
-  right: 20px;
+  bottom: 23px;
+  right: 21px;
 }
 
 .promotion-name {
@@ -442,9 +476,23 @@ fieldset {
   line-height: 24px;
   font-weight: bold;
   background: #ee6441;
+  border-radius: 50px;
+  box-shadow: 0 2px 2px 0 #550800;
+
   /*есть градиент!*/
 }
 
+/*пыталась сделать через опасити, не знаю как поверх фона наложить еще один цвет
+ такой вариант не будет ошибкой?*/
+.btn:hover {
+  background: #f38367;
+  box-shadow: 0 1px 2px 0 #ac1000;
+}
+
+.btn:active {
+  background: #db5238;
+  box-shadow: inset 0 2px 2px 0 #942718;
+}
 .catalog {
   margin-bottom: 75px;
   font-size: 0;
@@ -458,10 +506,16 @@ fieldset {
   display: inline-block;
   position: relative;
   vertical-align: top;
+  font-size: 0;
   width: 267px;
   margin-right: 26px;
   margin-bottom: 30px;
   text-align: center;
+}
+
+.hits-item img {
+  border-radius: 50%;
+  /*outline: 1px solid red;*/
 }
 
 .hit::before {
@@ -481,6 +535,7 @@ fieldset {
   font-weight: bold;
   left: 0;
   top: 165px;
+/*как сделать тень? св-во дает тень на блок. спан тоже...*/
 }
 
 .hits-price {
@@ -489,7 +544,12 @@ fieldset {
 
 .hits-item a {
   font-size: 16px;
+  line-height: 22px;
+  font-weight: medium;
   color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid
+  /*outline: 1px solid yellow;*/
 }
 
 .hits-btn {
@@ -506,7 +566,8 @@ fieldset {
   padding: 20px;
   min-height: 266px;
   background: #ede2c8 url("../img/Bg-vaffel.jpg") repeat;
-  outline: 1px solid red;
+  border-radius: 15px;
+  /*outline: 1px solid red;*/
 }
 
 .features h2 {
@@ -533,7 +594,7 @@ fieldset {
   width: 485px;
   margin-right: 26px;
   margin-bottom: 5px;
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
 }
 
 .features li:nth-child(2n) {
@@ -576,6 +637,7 @@ fieldset {
   box-sizing: border-box;
   padding-left: 20px;
   padding-top: 22px;
+  border-radius: 15px;
 }
 
 .news-left p {
@@ -601,6 +663,7 @@ fieldset {
   color: #323232;
   box-sizing: border-box;
   padding: 35px 26px;
+  border-radius: 15px;
 }
 
 .news-right p {
