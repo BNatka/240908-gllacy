@@ -88,8 +88,8 @@ h1 {
 }
 
 
-/*саб меню не могу подогнать к pixel perfect
-и полоску тоже ,м.б. это псевдоэлемент?*/
+/*
+полоску тоже ,м.б. это псевдоэлемент?*/
 
 .active-menu {
   position: absolute;
@@ -154,7 +154,43 @@ h1 {
   margin-left: 23px;
   margin-right: 10px;
   margin-top: 19px;
-  /*outline: 1px solid yellow;*/
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.search:hover .search-form {
+  display: block;
+}
+
+.search-form {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 36px;
+  left: -310px;
+  width: 310px;
+  padding: 20px 15px;
+  padding-bottom: 0px;
+  background: #f8f7f4;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+.search-form input {
+  width: 100%;
+  padding: 9px 12px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #999999;
+  font-family: "Roboto";
+  font-weight: normal;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+}
+
+.search-form .buttons {
+  display: none;
 }
 
 .search-btn {
@@ -182,19 +218,103 @@ h1 {
 }
 
 .search-btn:hover::before, .search-btn:hover {
-  opacity: 1;
+  background-color: rgba(248, 247, 244, 1);
   background-position: -266px -161px;
-}
-
-.search-form {
-  display: none;
 }
 
 .user-block {
   float: left;
   margin-right: 8px;
   margin-top: 20px;
-  /*outline: 1px solid yellow;*/
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.user-block:hover .login-form {
+  display: block;
+}
+
+.login-form {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 35px;
+  left: -180px;
+  width: 235px;
+  min-height: 174px;
+  padding: 20px;
+  padding-bottom: 0;
+  background: #f8f7f4;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+.login-form input {
+  width: 92%;
+  padding: 10px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #999999;
+  font-family: "Roboto";
+  font-weight: normal;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 40px;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  vertical-align: top;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  background: #f26843;
+  background: -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.btn:hover {
+  background: -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.btn:active {
+  background: -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.login-form a {
+  float: left;
+  color: #323232;
+  font-size: 13px;
+  line-height: 24px;
+  margin-left: 14px;
+  font-weight: normal;
+}
+
+.login-form .btn {
+  float: left;
+  width: 100px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 10px 5px;
+  text-shadow: none;
+  box-shadow: none;
+  border-radius: 20px;
+  border: 0;
 }
 
 .login {
@@ -224,22 +344,79 @@ h1 {
 }
 
 .login:hover, .login:hover::before {
-  opacity: 1;
-  color: #323232;
+  background-color: rgba(248, 247, 244, 1);
   background-position: -36px -188px;
-}
-
-.login-form {
-  display: none;
 }
 
 .basket {
   float: left;
+  position: relative;
   width: 117px;
   margin-top: 20px;
   margin-right: 0;
+  padding-bottom: 5px;
   text-align: right;
+}
+
+.basket:hover .basket-full {
+  display: block;
+}
+
+.basket-full {
+  display: none;
+  width: 540px;
+  padding: 20px 13px;
+  position: absolute;
+  top: 36px;
+  right: 0px;
+  background: #f8f7f4;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  color: #323232;
+  font-size: 13px;
+  line-height: 16px;
+  border-radius: 5px;
+}
+
+.basket-full-1 {
+  text-align: left;
+  border-spacing: 5px;
+}
+
+.basket-full td {
+  padding-right: 10px;
   /*outline: 1px solid yellow;*/
+}
+
+.basket-full td:nth-child(4n) {
+  width: 25%;
+}
+
+.basket-full td:nth-child(5n) {
+  width: 15%
+}
+
+.basket-w {
+  color: #999999;
+}
+
+.basket-price {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.basket-full .btn {
+  margin-top: 15px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-shadow: none;
+  padding: 10px 10px;
+}
+
+.basket-full a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .basket-btn {
@@ -275,17 +452,12 @@ h1 {
   background-position: -228px -5px;
 }
 
-.basket-full {
-  display: none;
-}
-
 .breadcrumbs {
   float: left;
   width: 850px;
   margin-top: 20px;
   margin-right: 0px;
   margin-bottom: 5px;
-  /*outline: 1px solid white;*/
 }
 
 .breadcrumbs ul {
@@ -311,25 +483,19 @@ h1 {
   width: 170px;
   margin-top: 18px;
   text-align: right;
-  /*outline: 1px solid yellow;*/
 }
 
 .schedule-time {
   font-size: 14px;
   line-height: 16px;
   font-weight: bold;
-  /*outline: 1px solid white;*/
 }
-
-
-/*не сходится*/
 
 .schedule-phone {
   margin-top: 5px;
   font-size: 22px;
   line-height: 24px;
   font-weight: bold;
-  /*outline: 1px solid white;*/
 }
 
 .filter {
@@ -452,6 +618,11 @@ fieldset {
 
 .promotion .btn {
   position: absolute;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-shadow: none;
+  padding: 10px 22px;
   bottom: 23px;
   right: 21px;
 }
@@ -462,7 +633,8 @@ fieldset {
   font-weight: bold;
 }
 
-.btn {
+
+/*.btn {
   display: inline-block;
   vertical-align: top;
   padding: 10px 22px;
@@ -475,12 +647,10 @@ fieldset {
   background: #ee6441;
   border-radius: 50px;
   box-shadow: 0 2px 2px 0 #550800;
-  /*есть градиент!*/
+  cursor: pointer;
+  outline: 1px solid yellow;
+
 }
-
-
-/*пыталась сделать через опасити, не знаю как поверх фона наложить еще один цвет
- такой вариант не будет ошибкой?*/
 
 .btn:hover {
   background: #f38367;
@@ -490,7 +660,7 @@ fieldset {
 .btn:active {
   background: #db5238;
   box-shadow: inset 0 2px 2px 0 #942718;
-}
+}*/
 
 .catalog {
   margin-bottom: 75px;
@@ -510,29 +680,25 @@ fieldset {
   margin-right: 26px;
   margin-bottom: 30px;
   text-align: center;
+  outline: 1px solid yellow;
 }
 
-.hits-item:hover .hits-hover {
+.hits-item:hover::after, .hits-item:hover.hits-item .btn {
   display: block;
 }
 
-.hits-hover {
+.hits-item::after {
+  content: "";
   display: none;
   background: rgba(255, 255, 255, 0.2);
   position: absolute;
   top: -10px;
   left: -10px;
-  z-index: 5;
+  z-index: 50;
   width: 289px;
-  height: 410px;
+  min-height: 410px;
   border-radius: 3px;
   box-shadow: 0 20px 20px 40% #000000;
-}
-
-.hits-hover .btn {
-  position: absolute;
-  top: 350px;
-  left: 50px;
 }
 
 .hits-item img {
@@ -546,6 +712,7 @@ fieldset {
   background-position: -169px -35px;
   width: 61px;
   height: 61px;
+  z-index: 10;
   top: 0;
   left: 0;
 }
@@ -557,29 +724,37 @@ fieldset {
   font-weight: bold;
   left: 0;
   top: 165px;
-  /*как сделать тень? св-во дает тень на блок. спан тоже...*/
+  text-shadow: 0 1px 3px 0 rgba(49, 50, 53, 0.5);
 }
 
 .hits-price {
   font-size: 30px;
+  text-shadow: 0 1px 3px 0 rgba(49, 50, 53, 0.5);
 }
 
 .hits-item a {
+  display: inline-block;
+  position: relative;
   font-size: 16px;
   line-height: 22px;
   font-weight: medium;
   color: #ffffff;
+  padding: 0 12px;
+  margin-bottom: 20px;
+  z-index: 3;
 }
 
-
-/*не работает*/
+.hits-item .btn {
+  display: none;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-shadow: none;
+  padding: 12px 10px;
+}
 
 .hits-item a:hover {
   text-decoration: none;
-}
-
-.hits-btn {
-  display: none;
 }
 
 .hits-item:nth-child(4n) {
@@ -625,7 +800,6 @@ fieldset {
   padding-right: 0;
   display: inline-block;
   vertical-align: top;
-  /*font-size: 0;  Куда деть шрифт? создавать еще один тег в html? */
   color: #323232;
   float: left;
   width: 485px;
@@ -688,6 +862,7 @@ fieldset {
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
+  color: #323232;
   text-decoration: underline;
 }
 
@@ -699,12 +874,41 @@ fieldset {
   color: #323232;
   box-sizing: border-box;
   padding: 35px 26px;
+  padding-bottom: 0px;
   border-radius: 15px;
 }
 
 .news-right p {
   margin: 0;
-  padding-bottom: 30px;
+  padding-bottom: 33px;
+}
+
+.subscribe {
+  display: inline-block;
+  vertical-align: top;
+  width: 510px;
+  margin: 0;
+  padding: 0;
+}
+
+.subscribe input[type="email"] {
+  float: left;
+  margin-top: 5px;
+  width: 330px;
+  padding: 8px 15px;
+  margin-right: 7px;
+}
+
+.subscribe .btn {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  padding: 10px 17px;
+  float: left;
+  margin-right: 0;
+  box-shadow: none;
+  text-shadow: none;
+  border: 0;
 }
 
 .main-footer {
@@ -713,18 +917,95 @@ fieldset {
 
 .map {
   width: 1200px;
+  position: relative;
   margin: 0 auto;
   margin-bottom: 15px;
 }
 
 .address {
-  display: none;
+  display: block;
+  position: absolute;
+  padding: 30px 22px;
+  top: 60px;
+  right: 26px;
+  width: 255px;
+  background: #ffffff;
+  border-radius: 5px;
 }
 
-.page {
-  width: 190px;
+.address p {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+  color: #323232;
+}
+
+.address-bold {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.address-bold2 {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+}
+
+.address .btn {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  padding: 12px 25px;
+  text-shadow: none;
+}
+
+.paginator {
+  width: 250px;
   float: right;
   margin-bottom: 30px;
+}
+
+.paginator a {
+  display: inline-block;
+  vertical-align: middle;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: medium;
+  text-align: center;
+  text-decoration: none;
+  min-width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.paginator a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fdfefe;
+}
+
+.paginator a:active {
+  background: rgba(255, 255, 255, 1);
+  color: #323232;
+}
+
+.paginator a.page-btn {
+  background: rgba(255, 255, 255, 1);
+  color: #323232;
+}
+
+.paginator a.page-btn-prev {
+  background: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.paginator a.page-btn-next {
+  background: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 1);
 }
 
 .feedback {

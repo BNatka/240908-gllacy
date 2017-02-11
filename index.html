@@ -26,6 +26,7 @@
               <a href="#">Каталог</a>
               <ul class="active-menu">
                 <li><a href="#"><span class="new">Новинки</span></a></li>
+                <hr><!-- хелп, я не знаю как эту полоску сделать! -->
                 <li><a href="catalog.html">Сливочное</a></li>
                 <li><a href="#">Щербеты</a></li>
                 <li><a href="#">Фруктовый лед</a></li>
@@ -54,17 +55,15 @@
         </div>
         <div class="user-block">
           <a class="login" href="#">Вход</a>
-          <fieldset class="login-form">
+          <div class="login-form">
             <form action="https://echo.htmlacademy.ru" method="post">
               <input type="email" name="email" placeholder="Электронная почта" required>
               <input type="text" name="password" id="password-field" placeholder="Пароль">
-              <div class="buttons">
-                <input type="submit" value="Войти">
-              </div>
-              <a href="#">Забыли пароль?</a>
-              <a href="#">Новая регистрация</a>
-            </form>
-          </fieldset>
+              <input class="btn" type="submit" value="Войти">
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+                </form>
+          </div>
         </div>
         <div class="basket">
           <a class="basket-btn" href="#">Пусто</a>
@@ -119,37 +118,28 @@
       <section class="hits clearfix">
         <!--ХИТЫ-->
         <article class="hits-item hit">
-          <div class="hits-hover">
-            <a class="btn" href="#">Быстрый просмотр</a>
-          </div>
           <img src="img/1-310.jpg" alt="мороженое" width="267" height="267">
-          <p>
-            310&#8381;<span class="hits-price">/кг</span></p>
-          <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          <p>310&#8381;<span class="hits-price">/кг</span></p>
+            <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            <a class="btn" href="#">Быстрый просмотр</a>
         </article>
         <article class="hits-item hit">
-          <div class="hits-hover">
-            <a class="btn" href="#">Быстрый просмотр</a>
-          </div>
           <img src="img/2-380.jpg" alt="мороженое" width="267" height="267">
           <p> 380&#8381;<span class="hits-price">/кг</span></p>
           <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+          <a class="btn" href="#">Быстрый просмотр</a>
         </article>
         <article class="hits-item hit">
-          <div class="hits-hover">
-            <a class="btn" href="#">Быстрый просмотр</a>
-          </div>
           <img src="img/3-355.jpg" alt="мороженое" width="267" height="267">
           <p>355&#8381;<span class="hits-price">/кг</span></p>
           <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          <a class="btn" href="#">Быстрый просмотр</a>
         </article>
         <article class="hits-item hit">
-          <div class="hits-hover">
-            <a class="btn" href="#">Быстрый просмотр</a>
-          </div>
           <img src="img/4-415.jpg" alt="мороженое" width="267" height="267">
           <p>415&#8381;<span class="hits-price">/кг</span></p>
           <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+          <a class="btn" href="#">Быстрый просмотр</a>
         </article>
       </section>
       <section class="features">
@@ -167,17 +157,14 @@
         <div class="news-left">
           <p>Новое в нашем блоге</p>
           <p>
-            <a class="news-text">10&ensp;способов сервировки фруктовых щербетов к столу</a>
-            <!-- В макете указаны два пробела??  -->
+            <a class="news-text" href="#">10&ensp;способов сервировки фруктовых щербетов к столу</a>
           </p>
         </div>
         <div class="news-right">
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
           <form class="subscribe" action="https://echo.htmlacademy.ru/" method="post">
             <input type="email" name="email" placeholder="Электронная почта">
-            <div class="buttons">
-              <input type="submit" value="Отправить">
-            </div>
+            <input class="btn" type="submit" value="Отправить">
           </form>
         </div>
       </section>
@@ -190,9 +177,8 @@
           <p>Адрес главного офиса<br> и офлайн магазина:<br>
             <span class="address-bold">ул. Большая Конюшенная<br>
   19/8, Санкт-Петербург</span><br><br> Для заказов по телефону:<br>
-            <span class="address-bold">8 812 450-25-25</span><br> (с 10 до 20 ежедневно)</p>
-
-          <a class="btn" href="#">Форма обратной связи</a>
+            <span class="address-bold2">8 812 450-25-25</span><br> (с 10 до 20 ежедневно)</p>
+            <a class="btn" href="#">Форма обратной связи</a>
         </div>
         <!--В фотошопе увидела форму, это дополнительные требования?-->
         <fieldset class="feedback">
