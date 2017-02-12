@@ -63,7 +63,6 @@
         </div>
         <div class="basket">
           <a class="basket-btn" href="#">2 товара</a>
-          <!--Правильнее будет верска через display: table ?-->
           <div class="basket-full">
             <table class="basket-full-1">
               <tr>
@@ -110,15 +109,25 @@
         <section class="filter clearfix">
           <!--Фильтр/сортровщик-->
           <form action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="select">
+            <fieldset class="sort">
               <legend>Сортировка:</legend>
-              <select name="select">
-              <option value="По популярности">По популярности </option>
-              <option value="По цене"> По цене </option>
-          </select>
+              <div class="filter-name">
+                Сортировка:
+              </div>
+              <div class="form-style">
+              <select name="sorting">
+              <option value="По популярности"> по популярности </option>
+              <option value="Сначала недорогие"> Сначала недорогие </option>
+              <option value="Сначала дорогие"> Сначала дорогие </option>
+              <option value="По жирности"> По жирности </option>
+                </select>
+                </div>
             </fieldset>
             <fieldset class="filter-price">
               <legend>Цена: 100 руб. – 500 руб.</legend>
+              <div class="filter-name">
+                Цена: 100 руб. – 500 руб.
+              </div>
               <div class="range-controls">
                 <div class="scale">
                   <div class="bar"></div>
@@ -130,6 +139,10 @@
             <fieldset class="filter-fat">
               <!--ЖИРНОСТЬ-->
               <legend>Жирность:</legend>
+              <div class="filter-name">
+                Жирность:
+              </div>
+              <div class="fat-style">
               <div class="filter-fat-item">
                 <input type="checkbox" name="0%" id="filter-fat0">
                 <label for="filter-fat0">0 &#37;</label>
@@ -146,10 +159,15 @@
                 <input type="checkbox" name="выше 30%" id="filter-fat300">
                 <label for="filter-fat30">выше 30 &#37;</label>
               </div>
+            </div>
             </fieldset>
             <fieldset class="filter-topping">
               <!--Наполнитель-->
               <legend>Наполнители:</legend>
+              <div class="filter-name">
+                Наполнители:
+              </div>
+              <div class="fat-style">
               <div class="filter-topping-item">
                 <input type="checkbox" name="шоколад" id="filter-topping1" checked>
                 <label for="filter-topping1">Шоколадные</label>
@@ -170,9 +188,10 @@
                 <input type="checkbox" name="джемы" id="filter-topping5">
                 <label for="filter-topping5">Джемы</label>
               </div>
+                  </div>
             </fieldset>
             <div class="filter-button">
-              <input type="submit" value="Применить">
+              <input class="filter-btn" type="submit" value="Применить">
             </div>
           </form>
         </section>
