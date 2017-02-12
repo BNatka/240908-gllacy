@@ -8,6 +8,10 @@ body {
   background: #849d8f;
 }
 
+body > input[type="radio"] {
+  display: none;
+}
+
 fieldset {
   border: none;
 }
@@ -17,12 +21,37 @@ fieldset {
   clear: both;
 }
 
+.site-wrapper {
+  min-width: 1200px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.site-wrapper::before,
+.site-wrapper::after {
+  content: "";
+  visibility: hidden;
+}
+.site-wrapper::before {
+  background-image: url("../img/ice-2.png");
+}
+
+.site-wrapper::after {
+  background-image: url("../img/ice-2.png");
+}
+
+
 .container {
   width: 1146px;
   margin: 0 auto;
   padding-left: 27px;
   padding-right: 27px;
 }
+
+/*.main-header {
+  outline: 1px solid red;
+}*/
 
 .logo {
   float: left;
@@ -374,7 +403,6 @@ fieldset {
 
 .basket-full td {
   padding-right: 10px;
-  /*outline: 1px solid yellow;*/
 }
 
 .basket-full td:nth-child(4n) {
@@ -513,7 +541,7 @@ fieldset {
   width: 193px;
   margin-right: 15px;
   padding: 0;
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
 }
 
 .filter-name {
@@ -526,7 +554,7 @@ fieldset {
   line-height: 16px;
   color: #ffffff;
   font-weight: medium;
-  outline: 1px solid blue;
+  /*outline: 1px solid blue;*/
 }
 
 select[name="sorting"] {
@@ -560,7 +588,7 @@ select[name="sorting"]:hover {
   padding: 0;
   margin: 0;
   margin-right: 15px;
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
 }
 
 .range-controls {
@@ -613,14 +641,14 @@ select[name="sorting"]:hover {
   width: 417px;
   padding: 0;
   margin-right: 0px;
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
 }
 
 .fat-style {
   background: rgba(255, 255, 255, 0.2);
   padding: 8px 15px;
   border-radius: 20px;
-  outline: 1px solid white;
+  /*outline: 1px solid white;*/
 }
 
 .filter-fat-item {
@@ -635,7 +663,7 @@ select[name="sorting"]:hover {
   padding: 0;
   margin-top: 15px;
   margin-right: 15px;
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
 }
 
 .filter-topping-item {
@@ -661,7 +689,7 @@ select[name="sorting"]:hover {
   border: 2px solid #ffffff;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
 }
 
 .filter-btn:hover {
@@ -677,26 +705,113 @@ select[name="sorting"]:hover {
   box-shadow: inset 0 2px 1px #696969;
 }
 
+.slider {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 270px;
+  /*outline: 1px solid yellow;*/
+}
+
+.slider-title {
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: bold;
+}
+
+.slider-btn {
+  display: inline-block;
+  padding: 12px 50px;
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 41px;
+  vertical-align: top;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  background: #f26843;
+  background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.slider-btn:hover {
+  background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.slider-btn:active {
+  background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  z-index: 20;
+  font-size: 0;
+}
+
+.slider-controls label {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+    vertical-align: top;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 
 
-.slider {}
-
-.slider-box {}
-
-.slider-controls {}
-
-.slider-block2 {
+.slider-block {
   display: none;
 }
 
-.slider-block3 {
-  display: none;
+#slider-input-1:checked ~ .site-wrapper #slide1,
+#slider-input-2:checked ~ .site-wrapper #slide2,
+#slider-input-3:checked ~ .site-wrapper #slide3 {
+  display: block;
 }
 
 
+#slider-input-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/ice-1.png");
+}
+
+#slider-input-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image: url("../img/ice-2.png");
+}
+
+#slider-input-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image: url("../img/ice-3.png");
+}
+
+
+#slider-input-1:checked ~ .site-wrapper label[for="slider-input-1"],
+#slider-input-2:checked ~ .site-wrapper label[for="slider-input-2"],
+#slider-input-3:checked ~ .site-wrapper label[for="slider-input-3"] {
+  background-color: #ffffff;
+}
 /*---------------------------------*/
 
 .promotion {
+  margin-top: 35px;
   margin-bottom: 40px;
 }
 
@@ -762,35 +877,6 @@ select[name="sorting"]:hover {
   line-height: 41px;
   font-weight: bold;
 }
-
-
-/*.btn {
-  display: inline-block;
-  vertical-align: top;
-  padding: 10px 22px;
-  color: #ffffff;
-  text-decoration: none;
-  text-align: center;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: bold;
-  background: #ee6441;
-  border-radius: 50px;
-  box-shadow: 0 2px 2px 0 #550800;
-  cursor: pointer;
-  outline: 1px solid yellow;
-
-}
-
-.btn:hover {
-  background: #f38367;
-  box-shadow: 0 1px 2px 0 #ac1000;
-}
-
-.btn:active {
-  background: #db5238;
-  box-shadow: inset 0 2px 2px 0 #942718;
-}*/
 
 .catalog {
   margin-bottom: 75px;
@@ -1149,10 +1235,6 @@ select[name="sorting"]:hover {
   margin-right: 26px;
   /*outline: 1px solid yellow;*/
 }
-
-
-/*размер кнопок не совпадает с макетом... 35 с бордером.
-в макете 38. Ошибка?*/
 
 .social-btn {
   display: inline-block;

@@ -26,7 +26,8 @@
               <a href="#">Каталог</a>
               <ul class="active-menu">
                 <li><a href="#"><span class="new">Новинки</span></a></li>
-                <hr><!-- хелп, я не знаю как эту полоску сделать! -->
+                <hr>
+                <!-- хелп, я не знаю как эту полоску сделать! -->
                 <li><a href="catalog.html">Сливочное</a></li>
                 <li><a href="#">Щербеты</a></li>
                 <li><a href="#">Фруктовый лед</a></li>
@@ -60,9 +61,9 @@
               <input type="email" name="email" placeholder="Электронная почта" required>
               <input type="text" name="password" id="password-field" placeholder="Пароль">
               <input class="btn" type="submit" value="Войти">
-                <a href="#">Забыли пароль?</a>
-                <a href="#">Новая регистрация</a>
-                </form>
+              <a href="#">Забыли пароль?</a>
+              <a href="#">Новая регистрация</a>
+            </form>
           </div>
         </div>
         <div class="basket">
@@ -76,30 +77,25 @@
     </header>
     <!--Слайдер-->
     <main class="container">
-      <section class="slider">
-        <div class="slider-box">
-          <div class="slider-block1">
-            <p>Крем-брюле и пломбир с малиновым джемом</p>
-            <img src="img/ice-1.png" alt="Мороженое" width="1045" height="881">
-            <a class="slider-btn" href="#">Дайте оба!</a>
+        <div class="slider ">
+          <div class="slider-block" id="slide1">
+            <div class="slider-title"> Крем-брюле и пломбир с малиновым джемом </div>
+            <a class="slider-btn" href="#"> Давайте оба!</a>
           </div>
-          <div class="slider-block2">
-            <p>Шоколадный пломбир и лимонный сорбет</p>
-            <img src="img/ice-2.png" alt="Мороженое" width="1065" height="859">
-            <a class="slider-btn" href="#">Дайте оба!</a>
+          <div class="slider-block" id="slide2">
+            <div class="slider-title"> Шоколадный пломбир и лимонный сорбет </div>
+            <a class="slider-btn" href="#"> Давайте оба!</a>
           </div>
-          <div class="slider-block3">
-            <p>Пломбир с помадкой и клубничный щербет</p>
-            <img src="img/ice-3.png" alt="Мороженое" width="1079" height="854">
-            <a class="slider-btn" href="#">Дайте оба!</a>
+          <div class="slider-block" id="slide3">
+            <div class="slider-title"> Пломбир с помадкой и клубничный щербет </div>
+            <a class="slider-btn" href="#"> Давайте оба!</a>
           </div>
           <div class="slider-controls">
-            <label for="slider-input-1">1</label>
-            <label for="slider-input-2">2</label>
-            <label for="slider-input-3">3</label>
+            <label for="slider-input-1"></label>
+            <label for="slider-input-2"></label>
+            <label for="slider-input-3"></label>
           </div>
         </div>
-      </section>
       <section class="promotion clearfix">
         <!--АКЦИИ-->
         <div class="promotion-left">
@@ -120,8 +116,8 @@
         <article class="hits-item hit">
           <img src="img/1-310.jpg" alt="мороженое" width="267" height="267">
           <p>310&#8381;<span class="hits-price">/кг</span></p>
-            <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-            <a class="btn" href="#">Быстрый просмотр</a>
+          <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          <a class="btn" href="#">Быстрый просмотр</a>
         </article>
         <article class="hits-item hit">
           <img src="img/2-380.jpg" alt="мороженое" width="267" height="267">
@@ -178,7 +174,7 @@
             <span class="address-bold">ул. Большая Конюшенная<br>
   19/8, Санкт-Петербург</span><br><br> Для заказов по телефону:<br>
             <span class="address-bold2">8 812 450-25-25</span><br> (с 10 до 20 ежедневно)</p>
-            <a class="btn" href="#">Форма обратной связи</a>
+          <a class="btn" href="#">Форма обратной связи</a>
         </div>
         <!--В фотошопе увидела форму, это дополнительные требования?-->
         <fieldset class="feedback">
@@ -195,7 +191,7 @@
           </form>
         </fieldset>
       </section>
-      <div class="container">
+      <div class="container clearfix">
         <section class="footer-social">
           <a class="social-btn social-btn-tw" href="#">Твиттер</a>
           <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
