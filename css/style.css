@@ -659,18 +659,18 @@ select[name="sorting"]:hover {
   padding-right: 15px;
 }
 
-.filter-fat-item input[type="checkbox"] {
+.filter-fat-item input[type="radio"] {
   display: none;
 }
 
-.filter-fat-item input[type="checkbox"] + label {
+.filter-fat-item input[type="radio"] + label {
   display: block;
   position: relative;
   cursor: pointer;
   padding-left: 27px;
 
 }
-.filter-fat-item input[type="checkbox"] + label::before {
+.filter-fat-item input[type="radio"] + label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -682,7 +682,7 @@ select[name="sorting"]:hover {
   /*outline: 1px solid yellow;*/
 }
 
-.filter-fat-item input[type="checkbox"]:checked + label::after {
+.filter-fat-item input[type="radio"]:checked + label::after {
   content: "";
   position: absolute;
   top: 4px;
@@ -717,18 +717,18 @@ select[name="sorting"]:hover {
   text-transform: lowercase;
 }
 
-.filter-topping input[type="checkbox"] {
+.filter-topping input[type="radio"] {
   display: none;
 }
 
-.filter-topping input[type="checkbox"] + label {
+.filter-topping input[type="radio"] + label {
   display: block;
   position: relative;
   padding-left: 25px;
   cursor: pointer;
 }
 
-.filter-topping input[type="checkbox"] + label::before {
+.filter-topping input[type="radio"] + label::before {
   content: "";
   position: absolute;
   left: -5px;
@@ -738,7 +738,7 @@ select[name="sorting"]:hover {
   border-radius: 3px;
 }
 
-.filter-topping input[type="checkbox"]:checked + label::after {
+.filter-topping input[type="radio"]:checked + label::after {
   content: "";
   position: absolute;
   left: -5px;
