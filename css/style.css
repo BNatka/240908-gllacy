@@ -980,38 +980,63 @@ select[name="sorting"]:hover {
   /*outline: 1px solid yellow;*/
 }
 
-/*штуковина*/
-
-.hits-item:hover::after, .hits-item:hover.hits-item .btn {
-  display: none;
+.hits-item:hover::before, .hits-item:hover.hits-item .btn {
+  display: block;
+  vertical-align: top;
+  text-decoration: none;
 }
 
-.hits-item::after {
+
+.hits-item::before {
   content: "";
   display: none;
   background: rgba(255, 255, 255, 0.2);
   position: absolute;
-  top: -10px;
+  top: -9px;
   left: -10px;
-  z-index: 50;
+  z-index: 6;
   width: 289px;
-  min-height: 410px;
-  border-radius: 3px;
+  height: calc(100% + 58px);
+  border-radius: 5px;
   box-shadow: 0 20px 20px 40% #000000;
 }
+
+.hits-item a {
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: medium;
+  color: #ffffff;
+  margin-bottom: 20px;
+  z-index: 8;
+}
+
+ .hits-item .btn {
+  display: none;
+  position: absolute;
+  top: 330px;
+  left: 40px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-shadow: none;
+  padding: 10px 12px;
+  z-index: 8;
+}
+
 
 .hits-item img {
   border-radius: 50%;
 }
 
-.hit::before {
+.hit::after {
   content: "";
   position: absolute;
   background: url("../img/spritesheet.png") no-repeat;
   background-position: -169px -35px;
   width: 61px;
   height: 61px;
-  z-index: 10;
   top: 0;
   left: 0;
 }
@@ -1031,30 +1056,7 @@ select[name="sorting"]:hover {
   text-shadow: 0 1px 3px 0 rgba(49, 50, 53, 0.5);
 }
 
-.hits-item a {
-  display: inline-block;
-  position: relative;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: medium;
-  color: #ffffff;
-  /*padding: 0 12px;*/
-  margin-bottom: 20px;
-  z-index: 3;
-}
 
-.hits-item .btn {
-  display: none;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: bold;
-  text-shadow: none;
-  padding: 12px 10px;
-}
-
-.hits-item a:hover {
-  text-decoration: none;
-}
 
 .hits-item:nth-child(4n) {
   margin-right: 0;
