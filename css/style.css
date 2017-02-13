@@ -990,7 +990,7 @@ select[name="sorting"]:hover {
 .hits-item::before {
   content: "";
   display: none;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.3);
   position: absolute;
   top: -9px;
   left: -10px;
@@ -998,7 +998,7 @@ select[name="sorting"]:hover {
   width: 289px;
   height: calc(100% + 58px);
   border-radius: 5px;
-  box-shadow: 0 20px 20px 40% #000000;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .hits-item a {
