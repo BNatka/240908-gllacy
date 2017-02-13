@@ -54,8 +54,8 @@
             <form action="https://echo.htmlacademy.ru" method="post">
               <input type="email" name="email" placeholder="Электронная почта" required>
               <input type="text" name="password" id="password-field" placeholder="Пароль">
-                  <input class="btn" type="submit" value="Войти">
-                  <a href="#">Забыли пароль?</a>
+              <input class="btn" type="submit" value="Войти">
+              <a href="#">Забыли пароль?</a>
               <a href="#">Новая регистрация</a>
             </form>
           </fieldset>
@@ -81,7 +81,7 @@
             </table>
             <hr>
             <div>
-            <span class="basket-price">Итого: 750 руб.</span></div>
+              <span class="basket-price">Итого: 750 руб.</span></div>
             <div class="btn">
               <a href="#">Оформить заказ</a>
             </div>
@@ -114,13 +114,13 @@
                 Сортировка:
               </div>
               <div class="form-style">
-              <select name="sorting">
+                <select name="sorting">
               <option value="По популярности"> по популярности </option>
               <option value="Сначала недорогие"> Сначала недорогие </option>
               <option value="Сначала дорогие"> Сначала дорогие </option>
               <option value="По жирности"> По жирности </option>
                 </select>
-                </div>
+              </div>
             </fieldset>
             <fieldset class="filter-price">
               <legend>Цена: 100 руб. – 500 руб.</legend>
@@ -142,23 +142,23 @@
                 Жирность:
               </div>
               <div class="fat-style">
-              <div class="filter-fat-item">
-                <input type="radio" name="fat" value="0%" id="filter-fat0">
-                <label for="filter-fat0">0 &#37;</label>
+                <div class="filter-fat-item">
+                  <input type="radio" name="fat" value="0%" id="filter-fat0">
+                  <label for="filter-fat0">0 &#37;</label>
+                </div>
+                <div class="filter-fat-item">
+                  <input type="radio" name="fat" value="10%" id="filter-fat10" checked>
+                  <label for="filter-fat10">до 10 &#37;</label>
+                </div>
+                <div class="filter-fat-item">
+                  <input type="radio" name="fat" value="до 30%" id="filter-fat30">
+                  <label for="filter-fat30">до 30 &#37;</label>
+                </div>
+                <div class="filter-fat-item">
+                  <input type="radio" name="fat" value="выше 30%" id="filter-fat">
+                  <label for="filter-fat">выше 30 &#37;</label>
+                </div>
               </div>
-              <div class="filter-fat-item">
-                <input type="radio" name="fat" value="10%" id="filter-fat10" checked>
-                <label for="filter-fat10">до 10 &#37;</label>
-              </div>
-              <div class="filter-fat-item">
-                <input type="radio" name="fat" value="до 30%" id="filter-fat30">
-                <label for="filter-fat30">до 30 &#37;</label>
-              </div>
-              <div class="filter-fat-item">
-                <input type="radio" name="fat" value="выше 30%" id="filter-fat">
-                <label for="filter-fat">выше 30 &#37;</label>
-              </div>
-            </div>
             </fieldset>
             <fieldset class="filter-topping">
               <!--Наполнитель-->
@@ -167,27 +167,27 @@
                 Наполнители:
               </div>
               <div class="topping-style">
-              <div class="filter-topping-item">
-                <input type="radio" name="topping" value="шоколад" id="filter-topping1" checked>
-                <label for="filter-topping1">Шоколадные</label>
+                <div class="filter-topping-item">
+                  <input type="radio" name="topping" value="шоколад" id="filter-topping1" checked>
+                  <label for="filter-topping1">Шоколадные</label>
+                </div>
+                <div class="filter-topping-item">
+                  <input type="radio" name="topping" value="сахарные присыпки" id="filter-topping2">
+                  <label for="filter-topping2">Сахарные присыпки</label>
+                </div>
+                <div class="filter-topping-item">
+                  <input type="radio" name="topping" value="фрукты" id="filter-topping3">
+                  <label for="filter-topping3">Фрукты</label>
+                </div>
+                <div class="filter-topping-item">
+                  <input type="radio" name="topping" value="сиропы" id="filter-topping4">
+                  <label for="filter-topping4">Сиропы</label>
+                </div>
+                <div class="filter-topping-item">
+                  <input type="radio" name="topping" value="джемы" id="filter-topping5">
+                  <label for="filter-topping5">Джемы</label>
+                </div>
               </div>
-              <div class="filter-topping-item">
-                <input type="radio" name="topping" value="сахарные присыпки" id="filter-topping2">
-                <label for="filter-topping2">Сахарные присыпки</label>
-              </div>
-              <div class="filter-topping-item">
-                <input type="radio" name="topping" value="фрукты" id="filter-topping3">
-                <label for="filter-topping3">Фрукты</label>
-              </div>
-              <div class="filter-topping-item">
-                <input type="radio" name="topping" value="сиропы" id="filter-topping4">
-                <label for="filter-topping4">Сиропы</label>
-              </div>
-              <div class="filter-topping-item">
-                <input type="radio" name="topping" value="джемы" id="filter-topping5">
-                <label for="filter-topping5">Джемы</label>
-              </div>
-                  </div>
             </fieldset>
             <div class="filter-button">
               <input class="filter-btn" type="submit" value="Применить">
@@ -265,7 +265,7 @@
           </article>
           <article class="hits-item">
             <img src="img/12-420.jpg" alt="мороженое" width="267" height="267">
-            <p>420р/кг&#8381;<span class="hits-price">/кг</span></p>
+            <p>420&#8381;<span class="hits-price">/кг</span></p>
             <a href="#">Сливочное с мятным сиропом</a>
             <a class="btn" href="#">Быстрый просмотр</a>
           </article>
