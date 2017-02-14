@@ -4,7 +4,7 @@ body {
   line-height: 22px;
   color: #ffffff;
   font-weight: normal;
-  font-family: "Roboto", "Arial";
+  font-family: 'Roboto', sans-serif, "Arial";
   background: #849d8f;
 }
 
@@ -59,14 +59,14 @@ fieldset {
   width: 155px;
   height: 64px;
   margin-right: 10px;
-  margin-top: 8px;
+  margin-top: 9px;
 }
 
 .main-navigation {
   float: left;
   width: 677px;
   margin-right: 20px;
-  margin-top: 20px;
+  margin-top: 23px;
 }
 
 .main-navigation ul {
@@ -126,6 +126,7 @@ fieldset {
 }
 
 .active-menu li {
+  position: relative;
   display: block;
   padding: 0;
   margin: 0;
@@ -133,6 +134,16 @@ fieldset {
 
 .active-menu li:first-child {
   padding-bottom: 4px;
+}
+
+.active-menu li:first-child::after {
+  content: "";
+  position: absolute;
+  top: 36px;
+  left: 6px;
+  height: 1px;
+  width: 128px;
+  background: rgba(53, 53, 53, 0.2);
 }
 
 .active-menu a {
@@ -144,6 +155,10 @@ fieldset {
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
+}
+
+.active-menu .new a {
+  font-weight: bold;
 }
 
 .active-menu a {
@@ -159,9 +174,6 @@ fieldset {
   box-shadow: none;
 }
 
-.new {
-  font-weight: bold;
-}
 
 .active {
   color: #ffffff;
@@ -173,7 +185,7 @@ fieldset {
   float: left;
   margin-left: 23px;
   margin-right: 10px;
-  margin-top: 19px;
+  margin-top: 22px;
   padding-bottom: 5px;
   position: relative;
 }
@@ -245,7 +257,7 @@ fieldset {
 .user-block {
   float: left;
   margin-right: 8px;
-  margin-top: 20px;
+  margin-top: 23px;
   position: relative;
   padding-bottom: 5px;
 }
@@ -372,7 +384,7 @@ fieldset {
   float: left;
   position: relative;
   width: 117px;
-  margin-top: 20px;
+  margin-top: 23px;
   margin-right: 0;
   padding-bottom: 5px;
   text-align: right;
@@ -499,8 +511,11 @@ fieldset {
 
 .schedule {
   float: right;
+  padding: 0;
+  margin: 0;
   width: 170px;
-  margin-top: 18px;
+  margin-top: 12px;
+  margin-right: -2px;
   text-align: right;
 }
 
@@ -508,6 +523,7 @@ fieldset {
   font-size: 14px;
   line-height: 16px;
   font-weight: bold;
+  margin-right: 2px;
 }
 
 .schedule-phone {
@@ -792,8 +808,7 @@ select[name="sorting"]:hover {
   position: relative;
   text-align: center;
   color: #ffffff;
-  padding-top: 270px;
-  /*outline: 1px solid yellow;*/
+  padding-top: 275px;
 }
 
 .slider-title {
@@ -807,10 +822,10 @@ select[name="sorting"]:hover {
 
 .slider-btn {
   display: inline-block;
-  padding: 12px 50px;
-  font-weight: 600;
-  font-size: 31px;
-  line-height: 41px;
+  padding: 10px 40px;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
   vertical-align: top;
   color: #ffffff;
   text-decoration: none;
@@ -839,7 +854,7 @@ select[name="sorting"]:hover {
 
 .slider-controls {
   position: absolute;
-  bottom: 25px;
+  bottom: 21px;
   left: 0;
   z-index: 20;
   font-size: 0;
@@ -907,8 +922,8 @@ select[name="sorting"]:hover {
   box-sizing: border-box;
   margin: 0;
   padding-right: 20px;
-  padding-left: 20px;
-  padding-top: 17px;
+  padding-left: 19px;
+  padding-top: 16px;
   border-radius: 15px;
 }
 
@@ -930,8 +945,8 @@ select[name="sorting"]:hover {
   box-sizing: border-box;
   margin: 0;
   padding-right: 20px;
-  padding-left: 20px;
-  padding-top: 17px;
+  padding-left: 19px;
+  padding-top: 16px;
 }
 
 .promotion-right p {
@@ -948,9 +963,9 @@ select[name="sorting"]:hover {
   line-height: 24px;
   font-weight: bold;
   text-shadow: none;
-  padding: 10px 22px;
-  bottom: 23px;
-  right: 21px;
+  padding: 10px 21px;
+  bottom: 25px;
+  right: 22px;
 }
 
 .promotion-name {
@@ -1068,9 +1083,9 @@ select[name="sorting"]:hover {
   vertical-align: middle;
   text-align: left;
   margin-bottom: 40px;
-  width: 1106px;
+  width: 1116px;
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 10px;
   padding-top: 25px;
   padding-bottom: 15px;
   min-height: 266px;
@@ -1091,21 +1106,21 @@ select[name="sorting"]:hover {
   font-size: 24px;
   line-height: 30px;
   color: #323232;
-  font-weight: medium;
+  font-weight: 500;
 }
 
 .features li {
   position: relative;
-  padding-top: 15px;
-  padding-left: 55px;
+  padding-top: 11px;
+  padding-left: 56px;
   padding-right: 0;
   display: inline-block;
   vertical-align: top;
   color: #323232;
   float: left;
   width: 485px;
-  margin-right: 25px;
-  margin-bottom: 5px;
+  margin-right: 26px;
+  margin-bottom: 10px;
 }
 
 .features li:nth-child(2n) {
@@ -1147,7 +1162,7 @@ select[name="sorting"]:hover {
   color: #323232;
   box-sizing: border-box;
   padding-left: 20px;
-  padding-top: 22px;
+  padding-top: 24px;
   border-radius: 15px;
 }
 
@@ -1156,7 +1171,7 @@ select[name="sorting"]:hover {
   padding: 0;
   font-weight: medium;
   padding-right: 250px;
-  padding-bottom: 5px;
+  padding-bottom: 4px;
 }
 
 .news-text {
@@ -1170,11 +1185,11 @@ select[name="sorting"]:hover {
 .news-right {
   float: right;
   width: 560px;
-  height: 220px;
+  min-height: 220px;
   background: #f8f7f4 url("../img/bg-post.jpg") repeat;
   color: #323232;
   box-sizing: border-box;
-  padding: 35px 26px;
+  padding: 35px 27px;
   padding-bottom: 0px;
   border-radius: 15px;
 }
@@ -1182,6 +1197,9 @@ select[name="sorting"]:hover {
 .news-right p {
   margin: 0;
   padding-bottom: 33px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
 }
 
 .subscribe {
@@ -1194,17 +1212,26 @@ select[name="sorting"]:hover {
 
 .subscribe input[type="email"] {
   float: left;
-  margin-top: 5px;
+  margin-top: 3px;
   width: 330px;
-  padding: 8px 15px;
-  margin-right: 7px;
+  padding: 9px 22px;
+  padding-left: 13px;
+  margin-right: 10px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
+  font-family: "Roboto";
+  font-weight: normal;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+
 }
 
 .subscribe .btn {
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
-  padding: 10px 17px;
+  padding: 11px 17px;
   float: left;
   margin-right: 0;
   box-shadow: none;
@@ -1226,17 +1253,20 @@ select[name="sorting"]:hover {
 .address {
   display: block;
   position: absolute;
-  padding: 30px 22px;
-  top: 60px;
-  right: 26px;
-  width: 255px;
+  padding: 0px 20px;
+  padding-top: 25px;
+  padding-bottom: 35px;
+  top: 63px;
+  right: 27px;
+  width: 260px;
   background: #ffffff;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .address p {
   padding: 0;
-  margin: 0;
+  padding-right: 5px;
+  margin: 4px;
   margin-bottom: 25px;
   font-size: 14px;
   line-height: 20px;
@@ -1254,13 +1284,16 @@ select[name="sorting"]:hover {
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 2px;
 }
 
 .address .btn {
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
-  padding: 12px 25px;
+  padding: 9px 30px;
   text-shadow: none;
 }
 

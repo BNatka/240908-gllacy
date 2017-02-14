@@ -25,8 +25,7 @@
             <li>
               <a href="#">Каталог</a>
               <ul class="active-menu">
-                <li><a href="#"><span class="new">Новинки</span></a></li>
-                <!-- хелп, я не знаю как эту полоску сделать! -->
+                <li class="new"><a href="#">Новинки</a></li>
                 <li><a href="catalog.html">Сливочное</a></li>
                 <li><a href="#">Щербеты</a></li>
                 <li><a href="#">Фруктовый лед</a></li>
@@ -76,25 +75,25 @@
     </header>
     <!--Слайдер-->
     <main class="container">
-        <div class="slider ">
-          <div class="slider-block" id="slide1">
-            <div class="slider-title"> Крем-брюле и пломбир с малиновым джемом </div>
-            <a class="slider-btn" href="#"> Давайте оба!</a>
-          </div>
-          <div class="slider-block" id="slide2">
-            <div class="slider-title"> Шоколадный пломбир и лимонный сорбет </div>
-            <a class="slider-btn" href="#"> Давайте оба!</a>
-          </div>
-          <div class="slider-block" id="slide3">
-            <div class="slider-title"> Пломбир с помадкой и клубничный щербет </div>
-            <a class="slider-btn" href="#"> Давайте оба!</a>
-          </div>
-          <div class="slider-controls">
-            <label for="slider-input-1"></label>
-            <label for="slider-input-2"></label>
-            <label for="slider-input-3"></label>
-          </div>
+      <div class="slider ">
+        <div class="slider-block" id="slide1">
+          <div class="slider-title"> Крем-брюле и пломбир с малиновым джемом </div>
+          <a class="slider-btn" href="#"> Давайте оба!</a>
         </div>
+        <div class="slider-block" id="slide2">
+          <div class="slider-title"> Шоколадный пломбир и лимонный сорбет </div>
+          <a class="slider-btn" href="#"> Давайте оба!</a>
+        </div>
+        <div class="slider-block" id="slide3">
+          <div class="slider-title"> Пломбир с помадкой и клубничный щербет </div>
+          <a class="slider-btn" href="#"> Давайте оба!</a>
+        </div>
+        <div class="slider-controls">
+          <label for="slider-input-1"></label>
+          <label for="slider-input-2"></label>
+          <label for="slider-input-3"></label>
+        </div>
+      </div>
       <section class="promotion clearfix">
         <!--АКЦИИ-->
         <div class="promotion-left">
@@ -139,7 +138,7 @@
       </section>
       <section class="features">
         <!--ОСОБЕННОСТИ-->
-        <h2>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
+        <h2> Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес </h2>
         <ul>
           <li class="features-item ice">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
           <li class="features-item cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
@@ -169,10 +168,11 @@
         <!--КАРТА и АДРЕСС-->
         <img src="img/map.jpg" alt="Карта" width="1200" height="430">
         <div class="address">
-          <p>Адрес главного офиса<br> и офлайн магазина:<br>
+          <p>Адрес главного офиса <br> и офлайн магазина:<br>
             <span class="address-bold">ул. Большая Конюшенная<br>
-  19/8, Санкт-Петербург</span><br><br> Для заказов по телефону:<br>
-            <span class="address-bold2">8 812 450-25-25</span><br> (с 10 до 20 ежедневно)</p>
+                             19/8, Санкт-Петербург</span>
+            <br><br> Для заказов по телефону:<br>
+            <span class="address-bold2">8 812 450-25-25</span> (с 10 до 20 ежедневно)</p>
           <a class="btn" href="#">Форма обратной связи</a>
         </div>
       </section>
@@ -195,21 +195,21 @@
         </section>
       </div>
     </footer>
-      <fieldset class="feedback">
-        <legend>
-          Мы обязательно вам ответим!
-        </legend>
-        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-          <input type="text" name="login" placeholder="Как вас зовут?">
-          <input type="email" name="email" placeholder="Ваша почта для ответа?">
-          <textarea name="comment">Напишите что-нибудь...</textarea>
-          <div class="buttons">
-            <input type="submit" value="Отправить">
-          </div>
-        </form>
-      </fieldset>
-      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
-    </div>
-  </body>
+    <fieldset class="feedback">
+      <legend>
+        Мы обязательно вам ответим!
+      </legend>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <input type="text" name="login" placeholder="Как вас зовут?">
+        <input type="email" name="email" placeholder="Ваша почта для ответа?">
+        <textarea name="comment">Напишите что-нибудь...</textarea>
+        <div class="buttons">
+          <input type="submit" value="Отправить">
+        </div>
+      </form>
+    </fieldset>
+    <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+  </div>
+</body>
 
 </html>
