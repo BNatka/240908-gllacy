@@ -977,11 +977,12 @@ select[name="sorting"]:hover {
   margin-right: 26px;
   margin-bottom: 20px;
   text-align: center;
-  /*outline: 1px solid yellow;*/
+  z-index: 8;
+  outline: 1px solid yellow;
 }
 
 .hits-item:hover::before, .hits-item:hover.hits-item .btn {
-  display: block;
+  display: inline-block;
   vertical-align: top;
   text-decoration: none;
 }
@@ -994,9 +995,10 @@ select[name="sorting"]:hover {
   position: absolute;
   top: -9px;
   left: -10px;
-  z-index: 6;
+  z-index: 2;
   width: 289px;
-  height: calc(100% + 58px);
+  /*height: calc(100% + 20px);*/
+  height: 100%;
   border-radius: 5px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
@@ -1014,9 +1016,7 @@ select[name="sorting"]:hover {
 
  .hits-item .btn {
   display: none;
-  position: absolute;
-  top: 330px;
-  left: 40px;
+  position: relative;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
