@@ -560,7 +560,7 @@ fieldset {
 
 .filter {
   width: 1146px;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 }
 
 .sort {
@@ -577,12 +577,12 @@ fieldset {
   vertical-align: top;
   padding: 0;
   margin: 0;
-  margin-left: 18px;
+  margin-left: 16px;
   margin-bottom: 6px;
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
-  font-weight: medium;
+  font-weight: 500;
 }
 
 select[name="sorting"] {
@@ -593,7 +593,7 @@ select[name="sorting"] {
   border-radius: 20px;
   font-size: 16px;
   line-height: 18px;
-  font-weight: medium;
+  font-weight: 500;
   color: #ffffff;
 }
 
@@ -624,12 +624,12 @@ select[name="sorting"]:hover {
   vertical-align: top;
   padding: 0;
   margin: 0;
-  margin-left: 18px;
+  margin-left: 16px;
   margin-bottom: 6px;
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
-  font-weight: medium;
+  font-weight: 500;
 }
 
 .range-controls {
@@ -682,7 +682,7 @@ select[name="sorting"]:hover {
   float: left;
   width: 415px;
   padding: 0;
-  margin-right: 0px;
+  margin: 0px;
   /*outline: 1px solid yellow;*/
 }
 
@@ -696,16 +696,14 @@ select[name="sorting"]:hover {
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
-  font-weight: medium;
+  font-weight: 500;
 }
 
 
 .fat-style {
   background: rgba(255, 255, 255, 0.2);
   padding: 8px 17px;
-  /*padding-left: 17px;*/
   border-radius: 20px;
-  /*outline: 1px solid white;*/
 }
 
 .filter-fat-item {
@@ -740,7 +738,6 @@ select[name="sorting"]:hover {
   height: 18px;
   border: 1px solid #ffffff;
   border-radius: 50%;
-  /*outline: 1px solid yellow;*/
 }
 
 .filter-fat-item input[type="radio"]:checked+label::after {
@@ -757,7 +754,7 @@ select[name="sorting"]:hover {
 
 .filter-topping {
   float: left;
-  width: 703px;
+  width: 700px;
   padding: 0;
   margin-top: 14px;
   margin-right: 15px;
@@ -774,14 +771,14 @@ select[name="sorting"]:hover {
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
-  font-weight: medium;
+  font-weight: 500;
 }
 
 
 .topping-style {
   background: rgba(255, 255, 255, 0.2);
-  padding: 8px 0px;
-  padding-left: 20px;
+  padding: 8px 15px;
+  padding-right: 0px;
   border-radius: 20px;
   /*outline: 1px solid white;*/
 }
@@ -789,7 +786,8 @@ select[name="sorting"]:hover {
 .filter-topping-item {
   display: inline-block;
   vertical-align: top;
-  padding-right: 22px;
+  padding-left: 30px;
+  padding-right: 20px;
   text-transform: lowercase;
 }
 
@@ -801,14 +799,13 @@ select[name="sorting"]:hover {
 .filter-topping input[type="radio"]+label {
   display: block;
   position: relative;
-  padding-left: 25px;
   cursor: pointer;
 }
 
 .filter-topping input[type="radio"]+label::before {
   content: "";
   position: absolute;
-  left: -5px;
+  left: -31px;
   width: 18px;
   height: 18px;
   border: 1px solid #ffffff;
@@ -818,11 +815,10 @@ select[name="sorting"]:hover {
 .filter-topping input[type="radio"]:checked+label::after {
   content: "";
   position: absolute;
-  left: -5px;
+  left: -30px;
   background: url("../img/checkbox.png");
   width: 20px;
   height: 20px;
-  /*outline: 1px solid red;*/
 }
 
 .filter-button {
@@ -835,7 +831,7 @@ select[name="sorting"]:hover {
 .filter-btn {
   display: inline-block;
   padding: 8px 28px;
-  font-weight: medium;
+  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   vertical-align: top;
@@ -853,10 +849,10 @@ select[name="sorting"]:hover {
 }
 
 .filter-btn:active {
-  padding: 12px 30px;
+  padding: 10px 28px;
   color: #323232;
   background: #ededed;
-  border: none;
+  border: 2px #ededed;
   box-shadow: inset 0 2px 1px #696969;
 }
 
@@ -1030,10 +1026,7 @@ select[name="sorting"]:hover {
   font-weight: bold;
 }
 
-.catalog {
-  margin-bottom: 75px;
-  font-size: 0;
-}
+
 
 .hits {
   font-size: 0;
@@ -1049,14 +1042,13 @@ select[name="sorting"]:hover {
   margin-bottom: 20px;
   text-align: center;
   z-index: 8;
-  outline: 1px solid yellow;
 }
 
-.hits-item:hover::before, .hits-item:hover.hits-item .btn {
+/*.hits-item:hover::before, .hits-item:hover.hits-item .btn {
   display: inline-block;
   vertical-align: top;
   text-decoration: none;
-}
+}*/
 
 
 .hits-item::before {
@@ -1079,7 +1071,7 @@ select[name="sorting"]:hover {
   position: relative;
   font-size: 16px;
   line-height: 22px;
-  font-weight: medium;
+  font-weight: 500;
   color: #ffffff;
   margin-bottom: 20px;
   z-index: 8;
@@ -1225,7 +1217,7 @@ select[name="sorting"]:hover {
 .news-left p {
   margin: 0;
   padding: 0;
-  font-weight: medium;
+  font-weight: 500;
   padding-right: 250px;
   padding-bottom: 4px;
 }
@@ -1353,32 +1345,40 @@ select[name="sorting"]:hover {
   text-shadow: none;
 }
 
+
+.catalog {
+  margin-bottom: 41px;
+  font-size: 0;
+}
+
+
 .paginator {
-  width: 250px;
+  width: 185px;
   float: right;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .paginator a {
   display: inline-block;
   vertical-align: middle;
+  position: relative;
   color: #ffffff;
   font-size: 16px;
   line-height: 25px;
-  font-weight: medium;
+  font-weight: 500;
   text-align: center;
   text-decoration: none;
-  min-width: 25px;
-  height: 25px;
+  padding: 2px 8px;
   border-radius: 50%;
 }
 
-.paginator a:hover {
+
+.paginator a:hover:not(:first-child):not(:last-child)  {
   background: rgba(255, 255, 255, 0.2);
   color: #fdfefe;
 }
 
-.paginator a:active {
+.paginator a:active:not(:first-child):not(:last-child){
   background: rgba(255, 255, 255, 1);
   color: #323232;
 }
@@ -1387,18 +1387,42 @@ select[name="sorting"]:hover {
   background: rgba(255, 255, 255, 1);
   color: #323232;
 }
-
-.paginator a.page-btn-prev {
-  background: rgba(255, 255, 255, 0);
-  color: rgba(255, 255, 255, 0.5);
+.page-btn-prev::before {
+  content: "";
+  display: block;
+  background: url("../img/prev.png");
+  width: 9px;
+  height: 14px;
+  position: absolute;
+  top: -4px;
+  left: -6px;
 }
 
-.paginator a.page-btn-next {
-  background: rgba(255, 255, 255, 0);
-  color: rgba(255, 255, 255, 1);
+.page-btn-next::before {
+  content: "";
+  display: block;
+  background: url("../img/next.png");
+  width: 9px;
+  height: 14px;
+  position: absolute;
+  top: -5px;
+  left: 11px;
 }
 
+.main-footer {
+  position: relative;
+}
 
+.main-footer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -21px;
+  left: 103px;
+  width: 1145px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
 
 .footer-social {
   float: left;
