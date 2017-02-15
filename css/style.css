@@ -1356,6 +1356,18 @@ select[name="sorting"]:hover {
   width: 185px;
   float: right;
   margin-bottom: 10px;
+  position: relative;
+}
+
+.paginator::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 59px;
+  right: 0px;
+  width: 1145px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .paginator a {
@@ -1409,20 +1421,11 @@ select[name="sorting"]:hover {
   left: 11px;
 }
 
-.main-footer {
+/*.main-footer {
   position: relative;
-}
+}*/
 
-.main-footer::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -21px;
-  left: 103px;
-  width: 1145px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.3);
-}
+
 
 .footer-social {
   float: left;
