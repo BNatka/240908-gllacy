@@ -92,11 +92,9 @@
           <div class="schedule-phone"> 8 812 450-25-25 </div>
         </div>
         <div class="breadcrumbs">
-          <ul class="">
+          <ul>
             <li><a href="index.html">Главная</a></li>
-            <li>&raquo;</li>
             <li><a href="#">Каталог</a></li>
-            <li>&raquo;</li>
             <li><a>Сливочное</a></li>
           </ul>
         </div>
@@ -109,11 +107,8 @@
           <!--Фильтр/сортровщик-->
           <form action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="sort">
-              <legend>Сортировка:</legend>
-              <div class="filter-name">
-                Сортировка:
-              </div>
-              <div class="form-style">
+              <legend class="filter-name">Сортировка:</legend>
+                <div class="form-style">
                 <select name="sorting">
               <option value="По популярности"> по популярности </option>
               <option value="Сначала недорогие"> Сначала недорогие </option>
@@ -123,10 +118,7 @@
               </div>
             </fieldset>
             <fieldset class="filter-price">
-              <legend>Цена: 100 руб. – 500 руб.</legend>
-              <div class="filter-name">
-                Цена: 100 руб. – 500 руб.
-              </div>
+              <legend class="filter-name">Цена: 100 руб. – 500 руб.</legend>
               <div class="range-controls">
                 <div class="scale">
                   <div class="bar"></div>
@@ -137,36 +129,30 @@
             </fieldset>
             <fieldset class="filter-fat">
               <!--ЖИРНОСТЬ-->
-              <legend>Жирность:</legend>
-              <div class="filter-name">
-                Жирность:
-              </div>
-              <div class="fat-style">
+              <legend class="filter-name">Жирность:</legend>
+                <div class="fat-style">
                 <div class="filter-fat-item">
                   <input type="radio" name="fat" value="0%" id="filter-fat0">
-                  <label for="filter-fat0">0 &#37;</label>
+                  <label for="filter-fat0">0&#37;</label>
                 </div>
                 <div class="filter-fat-item">
                   <input type="radio" name="fat" value="10%" id="filter-fat10" checked>
-                  <label for="filter-fat10">до 10 &#37;</label>
+                  <label for="filter-fat10">до 10&#37;</label>
                 </div>
                 <div class="filter-fat-item">
                   <input type="radio" name="fat" value="до 30%" id="filter-fat30">
-                  <label for="filter-fat30">до 30 &#37;</label>
+                  <label for="filter-fat30">до 30&#37;</label>
                 </div>
                 <div class="filter-fat-item">
                   <input type="radio" name="fat" value="выше 30%" id="filter-fat">
-                  <label for="filter-fat">выше 30 &#37;</label>
+                  <label for="filter-fat">выше 30&#37;</label>
                 </div>
               </div>
             </fieldset>
             <fieldset class="filter-topping">
               <!--Наполнитель-->
-              <legend>Наполнители:</legend>
-              <div class="filter-name">
-                Наполнители:
-              </div>
-              <div class="topping-style">
+              <legend class="filter-name">Наполнители:</legend>
+                <div class="topping-style">
                 <div class="filter-topping-item">
                   <input type="radio" name="topping" value="шоколад" id="filter-topping1" checked>
                   <label for="filter-topping1">Шоколадные</label>

@@ -198,8 +198,8 @@ fieldset {
   display: none;
   position: absolute;
   z-index: 2;
-  top: 36px;
-  left: -310px;
+  top: 38px;
+  left: -307px;
   width: 310px;
   padding: 20px 15px;
   padding-bottom: 0px;
@@ -486,9 +486,11 @@ fieldset {
 .breadcrumbs {
   float: left;
   width: 850px;
-  margin-top: 20px;
+  padding: 0px;
+  margin-top: 22px;
   margin-right: 0px;
-  margin-bottom: 5px;
+  margin-left: 1px;
+  margin-bottom: 2px;
 }
 
 .breadcrumbs ul {
@@ -498,8 +500,16 @@ fieldset {
 
 .breadcrumbs li {
   display: inline-block;
+  position: relative;
+  padding-right: 15px;
   list-style: none;
   margin-right: 3px;
+}
+.breadcrumbs li:not(:last-child)::after {
+    content:"»";
+    position: absolute;
+    top: -3px;
+    left: 60px;
 }
 
 .breadcrumbs a {
@@ -536,7 +546,7 @@ fieldset {
 .content-title h1 {
   margin: 0;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
   font-size: 35px;
   line-height: 41px;
   color: #ffffff;
@@ -544,9 +554,9 @@ fieldset {
   font-family: "Roboto";
 }
 
-.filter legend {
+/*.filter legend {
   display: none;
-}
+}*/
 
 .filter {
   width: 1146px;
@@ -562,24 +572,24 @@ fieldset {
   /*outline: 1px solid yellow;*/
 }
 
-.filter-name {
+.sort .filter-name {
   display: inline-block;
   vertical-align: top;
   padding: 0;
   margin: 0;
-  margin-left: 15px;
+  margin-left: 18px;
+  margin-bottom: 6px;
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
   font-weight: medium;
-  /*outline: 1px solid blue;*/
 }
 
 select[name="sorting"] {
   background: rgba(255, 255, 255, 0.2);
   padding: 8px;
-  padding-left: 10px;
-  padding-right: 20px;
+  padding-left: 12px;
+  padding-right: 14px;
   border-radius: 20px;
   font-size: 16px;
   line-height: 18px;
@@ -609,10 +619,23 @@ select[name="sorting"]:hover {
   /*outline: 1px solid yellow;*/
 }
 
+.filter-price .filter-name {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  margin-left: 18px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  font-weight: medium;
+}
+
 .range-controls {
   position: relative;
   background: rgba(255, 255, 255, 0.2);
-  padding: 17px;
+  padding: 16px;
   border-radius: 20px;
 }
 
@@ -624,7 +647,7 @@ select[name="sorting"]:hover {
 .range-controls .bar {
   position: absolute;
   top: 17px;
-  left: 30px;
+  left: 40px;
   width: 100px;
   height: 4px;
   background: rgba(248, 247, 244, 1);
@@ -642,11 +665,11 @@ select[name="sorting"]:hover {
 }
 
 .toggle.min-toggle {
-  left: 30px;
+  left: 37px;
 }
 
 .toggle.max-toggle {
-  left: 130px;
+  left: 134px;
 }
 
 .range-controls .toggle:hover {
@@ -657,16 +680,30 @@ select[name="sorting"]:hover {
 
 .filter-fat {
   float: left;
-  width: 417px;
+  width: 415px;
   padding: 0;
   margin-right: 0px;
   /*outline: 1px solid yellow;*/
 }
 
+.filter-fat .filter-name {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  margin-left: 14px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  font-weight: medium;
+}
+
+
 .fat-style {
   background: rgba(255, 255, 255, 0.2);
-  padding: 8px 0px;
-  padding-left: 17px;
+  padding: 8px 17px;
+  /*padding-left: 17px;*/
   border-radius: 20px;
   /*outline: 1px solid white;*/
 }
@@ -674,7 +711,13 @@ select[name="sorting"]:hover {
 .filter-fat-item {
   display: inline-block;
   position: relative;
-  padding-right: 15px;
+  padding-right: 19px;
+}
+
+.filter-fat-item:last-child {
+  display: inline-block;
+  position: relative;
+  padding-right: 0px;
 }
 
 .filter-fat-item input[type="radio"] {
@@ -692,7 +735,7 @@ select[name="sorting"]:hover {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  left: -3px;
   width: 18px;
   height: 18px;
   border: 1px solid #ffffff;
@@ -704,7 +747,7 @@ select[name="sorting"]:hover {
   content: "";
   position: absolute;
   top: 4px;
-  left: 4px;
+  left: 1px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -716,10 +759,24 @@ select[name="sorting"]:hover {
   float: left;
   width: 703px;
   padding: 0;
-  margin-top: 15px;
+  margin-top: 14px;
   margin-right: 15px;
   /*outline: 1px solid yellow;*/
 }
+
+.filter-topping .filter-name {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  margin-left: 15px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  font-weight: medium;
+}
+
 
 .topping-style {
   background: rgba(255, 255, 255, 0.2);
@@ -730,9 +787,12 @@ select[name="sorting"]:hover {
 }
 
 .filter-topping-item {
+  display: inline-block;
+  vertical-align: top;
   padding-right: 22px;
   text-transform: lowercase;
 }
+
 
 .filter-topping input[type="radio"] {
   display: none;
@@ -763,10 +823,6 @@ select[name="sorting"]:hover {
   width: 20px;
   height: 20px;
   /*outline: 1px solid red;*/
-}
-
-.filter-topping-item {
-  display: inline-block;
 }
 
 .filter-button {
@@ -1395,9 +1451,9 @@ select[name="sorting"]:hover {
   float: left;
   width: 360px;
   margin-right: 26px;
-  margin-top: 15px;
-  padding-left: 100px;
-  padding-right: 100px;
+  margin-top: 13px;
+  padding-left: 109px;
+  padding-right: 50px;
   /*outline: 1px solid yellow;*/
 }
 
@@ -1407,7 +1463,7 @@ select[name="sorting"]:hover {
   text-align: left;
   position: relative;
   font-size: 0;
-  padding-left: 20px;
+  padding-left: 19px;
   margin-right: 10px;
 }
 
@@ -1438,14 +1494,21 @@ select[name="sorting"]:hover {
   font-weight: bold;
 }
 
+.footer-about a:nth-child(3n) {
+    margin-right: 23px;
+}
+
 .footer-copyright {
   float: right;
+  position: relative;
   width: 189px;
   padding-left: 78px;
   /*outline: 1px solid yellow;*/
 }
 
 .footer-copyright img {
+  position: relative;
+  top: -2px;
   display: inline-block;
   vertical-align: top;
 }
