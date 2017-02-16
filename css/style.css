@@ -8,6 +8,7 @@ body {
   background: #849d8f;
 }
 
+
 /*Так можно прописать???*/
 
 body>input[type="radio"] {
@@ -109,6 +110,11 @@ fieldset {
   display: block;
 }
 
+.main-navigation .active {
+  background-color: #d07058;
+  box-shadow: none;
+}
+
 .active-menu {
   position: absolute;
   top: 38px;
@@ -164,7 +170,6 @@ fieldset {
   font-weight: bold;
 }
 
-
 .active-menu a:hover {
   background-color: #fbded7;
 }
@@ -174,10 +179,8 @@ fieldset {
   box-shadow: none;
 }
 
-
-.active {
+.active-menu .active {
   color: #ffffff;
-  /* цвет не работает в саб меню*/
   background-color: #d07058;
 }
 
@@ -395,7 +398,7 @@ fieldset {
 }
 
 .basket-full {
-  display: block;
+  display: none;
   width: 515px;
   padding: 5px 12px;
   padding-bottom: 17px;
@@ -440,7 +443,7 @@ fieldset {
 }
 
 .col3 {
-  width:115px;
+  width: 115px;
   /*padding-right: 10px;*/
 }
 
@@ -448,7 +451,6 @@ fieldset {
   width: 80px;
   /*padding-right: 10px;*/
 }
-
 
 .col-price {
   color: #999999;
@@ -529,11 +531,12 @@ fieldset {
   list-style: none;
   margin-right: 3px;
 }
+
 .breadcrumbs li:not(:last-child)::after {
-    content:"»";
-    position: absolute;
-    top: -3px;
-    left: 60px;
+  content: "»";
+  position: absolute;
+  top: -3px;
+  left: 60px;
 }
 
 .breadcrumbs a {
@@ -723,7 +726,6 @@ select[name="sorting"]:hover {
   font-weight: 500;
 }
 
-
 .fat-style {
   background: rgba(255, 255, 255, 0.2);
   padding: 8px 17px;
@@ -798,7 +800,6 @@ select[name="sorting"]:hover {
   font-weight: 500;
 }
 
-
 .topping-style {
   background: rgba(255, 255, 255, 0.2);
   padding: 8px 15px;
@@ -814,7 +815,6 @@ select[name="sorting"]:hover {
   padding-right: 20px;
   text-transform: lowercase;
 }
-
 
 .filter-topping input[type="radio"] {
   display: none;
@@ -1303,7 +1303,6 @@ select[name="sorting"]:hover {
   font-weight: normal;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
-
 }
 
 .subscribe .btn {
@@ -1376,12 +1375,10 @@ select[name="sorting"]:hover {
   text-shadow: none;
 }
 
-
 .catalog {
   margin-bottom: 41px;
   font-size: 0;
 }
-
 
 .paginator {
   width: 185px;
@@ -1415,13 +1412,12 @@ select[name="sorting"]:hover {
   border-radius: 50%;
 }
 
-
-.paginator a:hover:not(:first-child):not(:last-child)  {
+.paginator a:hover:not(:first-child):not(:last-child) {
   background: rgba(255, 255, 255, 0.2);
   color: #fdfefe;
 }
 
-.paginator a:active:not(:first-child):not(:last-child){
+.paginator a:active:not(:first-child):not(:last-child) {
   background: rgba(255, 255, 255, 1);
   color: #323232;
 }
@@ -1430,6 +1426,7 @@ select[name="sorting"]:hover {
   background: rgba(255, 255, 255, 1);
   color: #323232;
 }
+
 .page-btn-prev::before {
   content: "";
   display: block;
@@ -1543,7 +1540,7 @@ select[name="sorting"]:hover {
 }
 
 .footer-about a:hover {
-color: #e84d37;
+  color: #e84d37;
 }
 
 .footer-about a:first-child {
@@ -1551,7 +1548,7 @@ color: #e84d37;
 }
 
 .footer-about a:nth-child(3n) {
-    margin-right: 23px;
+  margin-right: 23px;
 }
 
 .footer-copyright {
@@ -1583,7 +1580,7 @@ color: #e84d37;
 }
 
 .footer-copyright a:hover {
-color: #e84d37;
+  color: #e84d37;
 }
 
 .feedback {
