@@ -1638,7 +1638,7 @@ select[name="sorting"]:hover {
   padding: 10px;
   padding-right: 54px;
   margin-bottom: 20px;
-  border: 1px solid #b2b2b2;
+  border: 1px solid rgba(178, 178, 178, 0.5);
   border-radius: 5px;
   font-size: 16px;
   line-height: 24px;
