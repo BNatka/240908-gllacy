@@ -554,10 +554,6 @@ fieldset {
   font-family: "Roboto";
 }
 
-/*.filter legend {
-  display: none;
-}*/
-
 .filter {
   width: 1146px;
   margin-bottom: 37px;
@@ -569,7 +565,6 @@ fieldset {
   margin: 0;
   margin-right: 15px;
   padding: 0;
-  /*outline: 1px solid yellow;*/
 }
 
 .sort .filter-name {
@@ -1026,8 +1021,6 @@ select[name="sorting"]:hover {
   font-weight: bold;
 }
 
-
-
 .hits {
   font-size: 0;
 }
@@ -1041,56 +1034,24 @@ select[name="sorting"]:hover {
   margin-right: 26px;
   margin-bottom: 20px;
   text-align: center;
-  z-index: 8;
 }
 
-/*.hits-item:hover::before, .hits-item:hover.hits-item .btn {
-  display: inline-block;
-  vertical-align: top;
-  text-decoration: none;
-}*/
-
-
-.hits-item::before {
+.hits-item:hover::before {
   content: "";
-  display: none;
   background: rgba(255, 255, 255, 0.3);
   position: absolute;
-  top: -9px;
+  top: -5px;
   left: -10px;
   z-index: 2;
-  width: 289px;
-  /*height: calc(100% + 20px);*/
-  height: 100%;
+  width: 292px;
+  height: calc(100% + 63px);
   border-radius: 5px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
-.hits-item a {
-  display: inline-block;
-  position: relative;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 500;
-  color: #ffffff;
-  margin-bottom: 20px;
-  z-index: 8;
-}
-
- .hits-item .btn {
-  display: none;
-  position: relative;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: bold;
-  text-shadow: none;
-  padding: 10px 12px;
-  z-index: 8;
-}
-
-
 .hits-item img {
   border-radius: 50%;
+  z-index: 0;
 }
 
 .hit::after {
@@ -1104,22 +1065,54 @@ select[name="sorting"]:hover {
   left: 0;
 }
 
-.hits-item p {
+.hits-item .price {
   position: absolute;
   font-size: 45px;
   line-height: 45px;
   font-weight: bold;
-  left: 0;
-  top: 165px;
-  text-shadow: 0 1px 3px 0 rgba(49, 50, 53, 0.5);
+  z-index: 1;
+  left: 5px;
+  top: 210px;
 }
 
 .hits-price {
   font-size: 30px;
-  text-shadow: 0 1px 3px 0 rgba(49, 50, 53, 0.5);
 }
 
+.hits-item .title {
+  display: inline-block;
+  position: relative;
+  bottom: -3px;
+  padding: 0px 5px;
+  z-index: 2;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
 
+.hits-item .hidden {
+  position: absolute;
+  display: none;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: -35px;
+}
+
+.hits-item:hover .hidden {
+  display: block;
+}
+
+.hits-item .btn {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-shadow: none;
+  border-radius: 19px;
+  padding: 10px 17px;
+}
 
 .hits-item:nth-child(4n) {
   margin-right: 0;
