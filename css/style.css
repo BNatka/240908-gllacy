@@ -8,6 +8,8 @@ body {
   background: #849d8f;
 }
 
+/*Так можно прописать???*/
+
 body>input[type="radio"] {
   display: none;
 }
@@ -107,10 +109,6 @@ fieldset {
   display: block;
 }
 
-
-/*
-полоску тоже ,м.б. это псевдоэлемент?*/
-
 .active-menu {
   position: absolute;
   top: 38px;
@@ -155,15 +153,17 @@ fieldset {
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
+  border-radius: 0;
+}
+
+.active-menu a:hover {
+  color: #e84d37;
 }
 
 .active-menu .new a {
   font-weight: bold;
 }
 
-.active-menu a {
-  border-radius: 0;
-}
 
 .active-menu a:hover {
   background-color: #fbded7;
@@ -395,9 +395,10 @@ fieldset {
 }
 
 .basket-full {
-  display: none;
-  width: 540px;
-  padding: 20px 13px;
+  display: block;
+  width: 515px;
+  padding: 5px 12px;
+  padding-bottom: 17px;
   position: absolute;
   top: 36px;
   right: 0px;
@@ -410,23 +411,46 @@ fieldset {
 }
 
 .basket-full-1 {
+  border-collapse: separate;
+  border-spacing: 0px 20px;
+  font-size: 13px;
+  line-height: 16px;
   text-align: left;
-  border-spacing: 5px;
 }
 
-.basket-full td {
+.basket-full-1 .delete {
+  color: #323232;
+  cursor: pointer;
+}
+
+.col0 {
+  padding-top: 0px;
   padding-right: 10px;
 }
 
-.basket-full td:nth-child(4n) {
-  width: 25%;
+.col1 {
+  padding-top: 3px;
+  padding-right: 10px;
 }
 
-.basket-full td:nth-child(5n) {
-  width: 15%
+.col2 {
+  width: 220px;
+  padding-right: 10px;
+  text-align: left;
 }
 
-.basket-w {
+.col3 {
+  width:115px;
+  /*padding-right: 10px;*/
+}
+
+.col4 {
+  width: 80px;
+  /*padding-right: 10px;*/
+}
+
+
+.col-price {
   color: #999999;
 }
 
@@ -519,6 +543,10 @@ fieldset {
   line-height: 16px;
 }
 
+.breadcrumbs a:hover {
+  color: #e84d37;
+}
+
 .schedule {
   float: right;
   padding: 0;
@@ -590,6 +618,7 @@ select[name="sorting"] {
   line-height: 18px;
   font-weight: 500;
   color: #ffffff;
+  cursor: pointer;
 }
 
 select[name="sorting"]:hover {
@@ -835,6 +864,7 @@ select[name="sorting"]:hover {
   border: 2px solid #ffffff;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
+  cursor: pointer;
   /*outline: 1px solid yellow;*/
 }
 
@@ -1075,7 +1105,7 @@ select[name="sorting"]:hover {
   top: 210px;
 }
 
-.hits-price {
+.hits-item .hits-price {
   font-size: 30px;
 }
 
@@ -1090,6 +1120,10 @@ select[name="sorting"]:hover {
   font-weight: 500;
   color: #ffffff;
   margin-bottom: 20px;
+}
+
+.hits-item:hover .title {
+  text-decoration: none;
 }
 
 .hits-item .hidden {
@@ -1221,6 +1255,10 @@ select[name="sorting"]:hover {
   font-weight: bold;
   color: #323232;
   text-decoration: underline;
+}
+
+.news-text:hover {
+  color: #e84d37;
 }
 
 .news-right {
@@ -1414,12 +1452,6 @@ select[name="sorting"]:hover {
   left: 11px;
 }
 
-/*.main-footer {
-  position: relative;
-}*/
-
-
-
 .footer-social {
   float: left;
   width: 267px;
@@ -1510,6 +1542,10 @@ select[name="sorting"]:hover {
   /*outline: 1px solid red;*/
 }
 
+.footer-about a:hover {
+color: #e84d37;
+}
+
 .footer-about a:first-child {
   font-weight: bold;
 }
@@ -1546,6 +1582,9 @@ select[name="sorting"]:hover {
   font-weight: 18px;
 }
 
+.footer-copyright a:hover {
+color: #e84d37;
+}
 
 .feedback {
   display: none;
