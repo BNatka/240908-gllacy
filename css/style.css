@@ -932,7 +932,7 @@ select[name="sorting"]:hover {
   position: absolute;
   bottom: 21px;
   left: 0;
-  z-index: 20;
+  z-index: 5;
   font-size: 0;
 }
 
@@ -1646,7 +1646,7 @@ select[name="sorting"]:hover {
   font-family: "Roboto", "Arial", sans-serif;
 }
 
-.feedback-form input:focus {
+.feedback-form input:focus, .feedback-form textarea:focus{
   box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.5);
   border-radius: 5px;
 }
