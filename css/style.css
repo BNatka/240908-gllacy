@@ -19,6 +19,7 @@ fieldset {
   border: none;
 }
 
+
 .clearfix::after {
   content: "";
   display: table;
@@ -1097,7 +1098,7 @@ select[name="sorting"]:hover {
   line-height: 45px;
   font-weight: bold;
   z-index: 1;
-  left: 5px;
+  left: 0px;
   top: 210px;
 }
 
@@ -1372,14 +1373,14 @@ select[name="sorting"]:hover {
 }
 
 .catalog {
-  margin-bottom: 41px;
+  margin-bottom: 44px;
   font-size: 0;
 }
 
 .paginator {
   width: 185px;
   float: right;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   position: relative;
 }
 
@@ -1387,7 +1388,7 @@ select[name="sorting"]:hover {
   content: "";
   display: block;
   position: absolute;
-  top: 59px;
+  top: 55px;
   right: 0px;
   width: 1145px;
   height: 1px;
@@ -1404,7 +1405,7 @@ select[name="sorting"]:hover {
   font-weight: 500;
   text-align: center;
   text-decoration: none;
-  padding: 2px 8px;
+  padding: 0px 8px;
   border-radius: 50%;
 }
 
