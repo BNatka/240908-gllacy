@@ -4,12 +4,9 @@ body {
   line-height: 22px;
   color: #ffffff;
   font-weight: normal;
-  font-family: 'Roboto', sans-serif, "Arial";
+  font-family: "Roboto", "Arial", sans-serif;
   background: #849d8f;
 }
-
-
-/*Так можно прописать???*/
 
 body>input[type="radio"] {
   display: none;
@@ -52,15 +49,11 @@ fieldset {
   padding-right: 27px;
 }
 
-
-/*.main-header {
-  outline: 1px solid red;
-}*/
-
 .logo {
   float: left;
   width: 155px;
   height: 64px;
+  margin-left: -1px;
   margin-right: 10px;
   margin-top: 9px;
 }
@@ -118,7 +111,7 @@ fieldset {
 .active-menu {
   position: absolute;
   top: 38px;
-  left: -5px;
+  left: -7px;
   display: none;
   z-index: 2;
   list-style: none;
@@ -209,6 +202,7 @@ fieldset {
   background: #f8f7f4;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
+  color: #323232;
 }
 
 .search-form input {
@@ -217,11 +211,40 @@ fieldset {
   margin-bottom: 18px;
   font-size: 14px;
   line-height: 24px;
-  color: #999999;
-  font-family: "Roboto";
-  font-weight: normal;
+  color: #323232;
+  font-family: "Roboto" "Arial", sans-serif;
+  font-weight: bold;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
+}
+
+.search-form label {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #999999;
+}
+
+.search-form input:focus {
+  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.5);
+  outline: none;
+}
+
+.search-form input:hover {
+  box-shadow: 0 0 0 1px rgba(154, 154, 154, .5);
+}
+
+.search-form input:focus+label {
+  position: absolute;
+  top: 5px;
+  left: 30px;
+  color: #5b9ddf;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: normal;
 }
 
 .search-form .buttons {
@@ -275,26 +298,76 @@ fieldset {
   z-index: 2;
   top: 35px;
   left: -180px;
-  width: 235px;
+  width: 244px;
   min-height: 174px;
-  padding: 20px;
-  padding-bottom: 0;
+  padding: 17px;
+  padding-bottom: 5px;
+  padding-top: 20px;
   background: #f8f7f4;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
 }
 
 .login-form input {
-  width: 92%;
+  width: 90%;
   padding: 10px;
-  margin-bottom: 18px;
+  margin-bottom: 17px;
   font-size: 14px;
   line-height: 24px;
-  color: #999999;
-  font-family: "Roboto";
-  font-weight: normal;
+  color: #323232;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: bold;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
+}
+
+.login-form label[for="email-field"] {
+  position: absolute;
+  top: 30px;
+  left: 33px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #999999;
+}
+
+.login-form input:hover {
+  box-shadow: 0 0 0 1px rgba(154, 154, 154, .5);
+}
+
+.login-form input:focus {
+  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.5);
+  outline: none;
+}
+
+.login-form input:focus+label[for="email-field"] {
+  position: absolute;
+  top: 5px;
+  left: 30px;
+  color: #5b9ddf;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: normal;
+}
+
+.login-form label[for="password-field"] {
+  position: absolute;
+  top: 95px;
+  left: 33px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #999999;
+}
+
+.login-form input:focus+label[for="password-field"] {
+  position: absolute;
+  top: 68px;
+  left: 30px;
+  color: #5b9ddf;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: normal;
 }
 
 .btn {
@@ -308,23 +381,17 @@ fieldset {
   text-decoration: none;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
   background: #f26843;
-  background: -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
-  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
   background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   border-radius: 100px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
 .btn:hover {
-  background: -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
-  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .btn:active {
-  background: -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
-  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
@@ -334,7 +401,7 @@ fieldset {
   color: #323232;
   font-size: 13px;
   line-height: 24px;
-  margin-left: 14px;
+  margin-left: 19px;
   font-weight: normal;
 }
 
@@ -346,6 +413,8 @@ fieldset {
   font-weight: bold;
   color: #ffffff;
   padding: 10px 5px;
+  margin-right: 2px;
+  margin-top: 4px;
   text-shadow: none;
   box-shadow: none;
   border-radius: 20px;
@@ -389,7 +458,7 @@ fieldset {
   width: 117px;
   margin-top: 23px;
   margin-right: 0;
-  padding-bottom: 5px;
+  padding-bottom: 6px;
   text-align: right;
 }
 
@@ -444,12 +513,10 @@ fieldset {
 
 .col3 {
   width: 115px;
-  /*padding-right: 10px;*/
 }
 
 .col4 {
   width: 80px;
-  /*padding-right: 10px;*/
 }
 
 .col-price {
@@ -527,7 +594,7 @@ fieldset {
 .breadcrumbs li {
   display: inline-block;
   position: relative;
-  padding-right: 15px;
+  padding-right: 13px;
   list-style: none;
   margin-right: 3px;
 }
@@ -568,7 +635,7 @@ fieldset {
 }
 
 .schedule-phone {
-  margin-top: 5px;
+  margin-top: 4px;
   font-size: 22px;
   line-height: 24px;
   font-weight: bold;
@@ -582,12 +649,13 @@ fieldset {
   line-height: 41px;
   color: #ffffff;
   font-weight: bold;
-  font-family: "Roboto";
+  font-family: "Roboto", "Arial", sans-serif;
+  ;
 }
 
 .filter {
   width: 1146px;
-  margin-bottom: 37px;
+  margin-bottom: 39px;
 }
 
 .sort {
@@ -613,15 +681,17 @@ fieldset {
 
 select[name="sorting"] {
   background: rgba(255, 255, 255, 0.2);
-  padding: 8px;
+  padding: 7px;
   padding-left: 12px;
   padding-right: 14px;
   border-radius: 20px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+  font-family: "Roboto", "Arial", sans-serif;
   color: #ffffff;
   cursor: pointer;
+  border: none;
 }
 
 select[name="sorting"]:hover {
@@ -643,7 +713,6 @@ select[name="sorting"]:hover {
   padding: 0;
   margin: 0;
   margin-right: 15px;
-  /*outline: 1px solid yellow;*/
 }
 
 .filter-price .filter-name {
@@ -656,6 +725,7 @@ select[name="sorting"]:hover {
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 500;
 }
 
@@ -682,7 +752,7 @@ select[name="sorting"]:hover {
 
 .range-controls .toggle {
   position: absolute;
-  top: 9px;
+  top: 8px;
   width: 20px;
   height: 20px;
   border: 0;
@@ -692,11 +762,11 @@ select[name="sorting"]:hover {
 }
 
 .toggle.min-toggle {
-  left: 37px;
+  left: 35px;
 }
 
 .toggle.max-toggle {
-  left: 134px;
+  left: 133px;
 }
 
 .range-controls .toggle:hover {
@@ -710,7 +780,6 @@ select[name="sorting"]:hover {
   width: 415px;
   padding: 0;
   margin: 0px;
-  /*outline: 1px solid yellow;*/
 }
 
 .filter-fat .filter-name {
@@ -728,14 +797,14 @@ select[name="sorting"]:hover {
 
 .fat-style {
   background: rgba(255, 255, 255, 0.2);
-  padding: 8px 17px;
+  padding: 8px 16px;
   border-radius: 20px;
 }
 
 .filter-fat-item {
   display: inline-block;
   position: relative;
-  padding-right: 19px;
+  padding-right: 18px;
 }
 
 .filter-fat-item:last-child {
@@ -752,14 +821,18 @@ select[name="sorting"]:hover {
   display: block;
   position: relative;
   cursor: pointer;
-  padding-left: 27px;
+  padding-left: 28px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: "Roboto", "Arial", sans-serif;
 }
 
 .filter-fat-item input[type="radio"]+label::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: -3px;
+  top: -1px;
+  left: -1px;
   width: 18px;
   height: 18px;
   border: 1px solid #ffffff;
@@ -769,13 +842,12 @@ select[name="sorting"]:hover {
 .filter-fat-item input[type="radio"]:checked+label::after {
   content: "";
   position: absolute;
-  top: 4px;
-  left: 1px;
+  top: 3px;
+  left: 3px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background: #ffffff;
-  /*outline: 1px solid red;*/
 }
 
 .filter-topping {
@@ -784,7 +856,6 @@ select[name="sorting"]:hover {
   padding: 0;
   margin-top: 14px;
   margin-right: 15px;
-  /*outline: 1px solid yellow;*/
 }
 
 .filter-topping .filter-name {
@@ -792,7 +863,7 @@ select[name="sorting"]:hover {
   vertical-align: top;
   padding: 0;
   margin: 0;
-  margin-left: 15px;
+  margin-left: 14px;
   margin-bottom: 6px;
   font-size: 14px;
   line-height: 16px;
@@ -802,44 +873,56 @@ select[name="sorting"]:hover {
 
 .topping-style {
   background: rgba(255, 255, 255, 0.2);
-  padding: 8px 15px;
-  padding-right: 0px;
+  padding-left: 16px;
+  padding-right: 3px;
+  padding-top: 9px;
+  padding-bottom: 5px;
   border-radius: 20px;
-  /*outline: 1px solid white;*/
+}
+
+.filter-topping-item:last-child {
+  padding-right: 0px;
+  padding-left: 32px;
 }
 
 .filter-topping-item {
   display: inline-block;
   vertical-align: top;
   padding-left: 30px;
-  padding-right: 20px;
+  padding-right: 19px;
   text-transform: lowercase;
 }
 
-.filter-topping input[type="radio"] {
+.filter-topping input[type="checkbox"] {
   display: none;
 }
 
-.filter-topping input[type="radio"]+label {
+.filter-topping input[type="checkbox"]+label {
   display: block;
   position: relative;
   cursor: pointer;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: "Roboto", "Arial", sans-serif;
 }
 
-.filter-topping input[type="radio"]+label::before {
+.filter-topping input[type="checkbox"]+label::before {
   content: "";
   position: absolute;
   left: -31px;
+  top: -1px;
   width: 18px;
   height: 18px;
   border: 1px solid #ffffff;
   border-radius: 3px;
 }
 
-.filter-topping input[type="radio"]:checked+label::after {
+.filter-topping input[type="checkbox"]:checked+label::after {
   content: "";
   position: absolute;
-  left: -30px;
+  left: -31px;
+  top: -1px;
   background: url("../img/checkbox.png");
   width: 20px;
   height: 20px;
@@ -849,7 +932,7 @@ select[name="sorting"]:hover {
   float: left;
   width: 145px;
   margin-right: 0px;
-  margin-top: 36px;
+  margin-top: 35px;
 }
 
 .filter-btn {
@@ -865,7 +948,6 @@ select[name="sorting"]:hover {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   cursor: pointer;
-  /*outline: 1px solid yellow;*/
 }
 
 .filter-btn:hover {
@@ -908,23 +990,17 @@ select[name="sorting"]:hover {
   text-decoration: none;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
   background: #f26843;
-  background: -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
-  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
   background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   border-radius: 100px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
 .slider-btn:hover {
-  background: -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
-  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .slider-btn:active {
-  background: -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
-  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
@@ -933,7 +1009,7 @@ select[name="sorting"]:hover {
   position: absolute;
   bottom: 21px;
   left: 0;
-  z-index: 20;
+  z-index: 5;
   font-size: 0;
 }
 
@@ -980,9 +1056,6 @@ select[name="sorting"]:hover {
   background-color: #ffffff;
 }
 
-
-/*---------------------------------*/
-
 .promotion {
   margin-top: 40px;
   margin-bottom: 40px;
@@ -1012,6 +1085,18 @@ select[name="sorting"]:hover {
   font-weight: bold;
 }
 
+.promotion-left .btn {
+  position: relative;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-shadow: none;
+  padding: 10px 21px;
+  padding-bottom: 13px;
+  bottom: -45px;
+  right: -356px;
+}
+
 .promotion-right {
   position: relative;
   float: right;
@@ -1034,15 +1119,16 @@ select[name="sorting"]:hover {
   font-weight: bold;
 }
 
-.promotion .btn {
-  position: absolute;
+.promotion-right .btn {
+  position: relative;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
   text-shadow: none;
   padding: 10px 21px;
-  bottom: 25px;
-  right: 22px;
+  padding-bottom: 11px;
+  bottom: -44px;
+  right: -332px;
 }
 
 .promotion-name {
@@ -1101,7 +1187,7 @@ select[name="sorting"]:hover {
   line-height: 45px;
   font-weight: bold;
   z-index: 1;
-  left: 5px;
+  left: 0px;
   top: 210px;
 }
 
@@ -1186,14 +1272,14 @@ select[name="sorting"]:hover {
 
 .features li {
   position: relative;
-  padding-top: 11px;
-  padding-left: 56px;
+  padding-top: 12px;
+  padding-left: 58px;
   padding-right: 0;
   display: inline-block;
   vertical-align: top;
   color: #323232;
   float: left;
-  width: 485px;
+  width: 482px;
   margin-right: 26px;
   margin-bottom: 10px;
 }
@@ -1237,7 +1323,7 @@ select[name="sorting"]:hover {
   color: #323232;
   box-sizing: border-box;
   padding-left: 20px;
-  padding-top: 24px;
+  padding-top: 22px;
   border-radius: 15px;
 }
 
@@ -1268,7 +1354,7 @@ select[name="sorting"]:hover {
   background: #f8f7f4 url("../img/bg-post.jpg") repeat;
   color: #323232;
   box-sizing: border-box;
-  padding: 35px 27px;
+  padding: 33px 27px;
   padding-bottom: 0px;
   border-radius: 15px;
 }
@@ -1282,6 +1368,7 @@ select[name="sorting"]:hover {
 }
 
 .subscribe {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   width: 510px;
@@ -1298,27 +1385,59 @@ select[name="sorting"]:hover {
   margin-right: 10px;
   font-size: 16px;
   line-height: 24px;
-  color: #999999;
-  font-family: "Roboto";
-  font-weight: normal;
+  color: #323232;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: bold;
   border: 1px solid #d3d3d2;
   border-radius: 5px;
+}
+
+.subscribe label[for="email-new"] {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #999999;
+}
+
+.subscribe input[type="email"]:hover {
+  box-shadow: 0 0 0 1px rgba(154, 154, 154, .5);
+}
+
+.subscribe input[type="email"]:focus {
+  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.5);
+  outline: none;
+}
+
+.subscribe input[type="email"]:focus+label[for="email-new"] {
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  color: #5b9ddf;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: normal;
 }
 
 .subscribe .btn {
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
-  padding: 11px 17px;
+  font-family: "Roboto", "Arial", sans-serif;
+  padding: 8px 20px;
+  padding-bottom: 12px;
   float: left;
   margin-right: 0;
+  margin-top: 3px;
   box-shadow: none;
   text-shadow: none;
   border: 0;
 }
 
 .main-footer {
-  margin-top: 40px;
+  margin-top: 38px;
 }
 
 .map {
@@ -1331,21 +1450,12 @@ select[name="sorting"]:hover {
 .address {
   display: block;
   position: absolute;
-  padding: 0px 20px;
-  padding-top: 25px;
-  padding-bottom: 35px;
+  padding: 29px 25px;
   top: 63px;
-  right: 27px;
-  width: 260px;
+  right: 28px;
+  width: 250px;
   background: #ffffff;
   border-radius: 10px;
-}
-
-.address p {
-  padding: 0;
-  padding-right: 5px;
-  margin: 4px;
-  margin-bottom: 25px;
   font-size: 14px;
   line-height: 20px;
   font-weight: normal;
@@ -1371,19 +1481,22 @@ select[name="sorting"]:hover {
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
-  padding: 9px 30px;
+  font-family: "Roboto", "Arial", sans-serif;
+  padding: 9px 26px;
+  padding-bottom: 12px;
   text-shadow: none;
+  margin-top: 25px;
 }
 
 .catalog {
-  margin-bottom: 41px;
+  margin-bottom: 42px;
   font-size: 0;
 }
 
 .paginator {
   width: 185px;
   float: right;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   position: relative;
 }
 
@@ -1391,7 +1504,7 @@ select[name="sorting"]:hover {
   content: "";
   display: block;
   position: absolute;
-  top: 59px;
+  top: 55px;
   right: 0px;
   width: 1145px;
   height: 1px;
@@ -1408,7 +1521,7 @@ select[name="sorting"]:hover {
   font-weight: 500;
   text-align: center;
   text-decoration: none;
-  padding: 2px 8px;
+  padding: 0px 8px;
   border-radius: 50%;
 }
 
@@ -1454,7 +1567,6 @@ select[name="sorting"]:hover {
   width: 267px;
   margin-top: 15px;
   margin-right: 26px;
-  /*outline: 1px solid yellow;*/
 }
 
 .social-btn {
@@ -1503,7 +1615,6 @@ select[name="sorting"]:hover {
   margin-top: 13px;
   padding-left: 109px;
   padding-right: 50px;
-  /*outline: 1px solid yellow;*/
 }
 
 .about-simple {
@@ -1512,8 +1623,8 @@ select[name="sorting"]:hover {
   text-align: left;
   position: relative;
   font-size: 0;
-  padding-left: 19px;
-  margin-right: 10px;
+  padding-left: 20px;
+  margin-right: 8px;
 }
 
 .heart::before {
@@ -1536,7 +1647,6 @@ select[name="sorting"]:hover {
   font-size: 13px;
   line-height: 18px;
   color: #ffffff;
-  /*outline: 1px solid red;*/
 }
 
 .footer-about a:hover {
@@ -1548,7 +1658,7 @@ select[name="sorting"]:hover {
 }
 
 .footer-about a:nth-child(3n) {
-  margin-right: 23px;
+  margin-right: 21px;
 }
 
 .footer-copyright {
@@ -1556,12 +1666,12 @@ select[name="sorting"]:hover {
   position: relative;
   width: 189px;
   padding-left: 78px;
-  /*outline: 1px solid yellow;*/
+  margin-top: 2px;
 }
 
 .footer-copyright img {
   position: relative;
-  top: -2px;
+  top: -4px;
   display: inline-block;
   vertical-align: top;
 }
@@ -1570,23 +1680,185 @@ select[name="sorting"]:hover {
   padding: 0;
   margin: 0;
   font-size: 12px;
-  font-weight: 18px;
+  line-height: 18px;
 }
 
 .footer-copyright a {
   color: #ffffff;
   font-size: 12px;
-  font-weight: 18px;
+  line-height: 18px;
 }
 
 .footer-copyright a:hover {
   color: #e84d37;
 }
 
-.feedback {
+.modal-feedback {
   display: none;
+  position: absolute;
+  top: 340px;
+  left: 50%;
+  width: 480px;
+  margin-left: -265px;
+  padding: 15px 25px;
+  color: #000000;
+  background: #f8f7f4;
+  border-radius: 5px;
+  z-index: 20;
+}
+
+.modal-overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content-close {
-  display: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 18px;
+  height: 17px;
+  font-size: 0;
+  background: url("../img/spritesheet.png");
+  width: 18px;
+  height: 17px;
+  background-position: -169px -5px;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-title {
+  color: #323232;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.feedback-form {
+  margin-top: 20px;
+  position: relative;
+}
+
+.feedback-form input[type="text"], .feedback-form input[type="email"] {
+  width: 193px;
+  padding: 10px;
+  padding-right: 54px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(178, 178, 178, 0.5);
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #323232;
+  font-weight: bold;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.feedback-form label[for="name-field"] {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #999999;
+}
+
+.feedback-form input[type="text"]:focus+label[for="name-field"] {
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  color: #5b9ddf;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: normal;
+}
+
+.feedback-form label[for="your-email-field"] {
+  position: absolute;
+  top: 75px;
+  left: 10px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #999999;
+}
+
+.feedback-form input[type="email"]:focus+label[for="your-email-field"] {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  color: #5b9ddf;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: normal;
+}
+
+.feedback-form textarea {
+  width: 95%;
+  height: 153px;
+  border: 1px solid rgba(178, 178, 178, 0.5);
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #323232;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 5px;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.feedback-form label[for="write-field"] {
+  position: absolute;
+  top: 145px;
+  left: 10px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #999999;
+}
+
+.feedback-form textarea[name="comment"]:focus+label[for="write-field"] {
+  position: absolute;
+  top: 115px;
+  left: 10px;
+  color: #5b9ddf;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: normal;
+}
+
+.feedback-form input:focus, .feedback-form textarea:focus {
+  box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.5);
+  outline: none;
+}
+
+.feedback-form input:hover, .feedback-form textarea:hover {
+  box-shadow: 0 0 0 1px rgba(154, 154, 154, .5);
+  border-radius: 5px;
+}
+
+.feedback-send .btn {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  padding: 11px 17px;
+  float: right;
+  margin-top: 20px;
+  box-shadow: none;
+  text-shadow: none;
+  border: 0;
+}
+
+.feedback-send .btn:hover {
+  border-radius: 25px;
+}
+
+.feedback-send .btn:active {
+  border-radius: 25px;
 }

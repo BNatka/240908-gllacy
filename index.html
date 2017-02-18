@@ -44,8 +44,8 @@
           <a class="search-btn" href="#">Поиск</a>
           <div class="search-form">
             <form action="https://echo.htmlacademy.ru" method="post">
-              <label for="search"></label>
-              <input type="search" name="search" placeholder="Что ищем?" id="search">
+              <input type="search" name="search" id="search-field">
+              <label for="search-field">Что ищем?</label>
               <div class="buttons">
                 <input type="submit" value="Поиск">
               </div>
@@ -56,8 +56,10 @@
           <a class="login" href="#">Вход</a>
           <div class="login-form">
             <form action="https://echo.htmlacademy.ru" method="post">
-              <input type="email" name="email" placeholder="Электронная почта" required>
-              <input type="text" name="password" id="password-field" placeholder="Пароль">
+              <input type="email" name="email" id="email-field" required>
+              <label for="email-field">Электронная почта</label>
+              <input type="password" name="password" id="password-field" required>
+              <label for="password-field">Пароль</label>
               <input class="btn" type="submit" value="Войти">
               <a href="#">Забыли пароль?</a>
               <a href="#">Новая регистрация</a>
@@ -98,13 +100,11 @@
         <!--АКЦИИ-->
         <div class="promotion-left">
           <b class="promotion-name"> Малинка даром!</b>
-          <!--один размер с заголовком в каталоге-->
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
           </p>
           <a class="btn" href="#">Хочу варенье!</a> </div>
         <div class="promotion-right">
           <b class="promotion-name"> Шоколадки даром!</b>
-          <!--один размер с заголовком в каталоге-->
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
           </p>
           <a class="btn" href="#">Хочу шоколадки!</a> </div>
@@ -116,28 +116,28 @@
           <b class="price">310&#8381;<span class="hits-price">/кг</span></b>
           <a class="title" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           <div class="hidden">
-              <a class="btn" href="#">Быстрый просмотр</a></div>
+            <a class="btn" href="#">Быстрый просмотр</a></div>
         </article>
         <article class="hits-item hit">
           <img src="img/2-380.jpg" alt="мороженое" width="267" height="267">
           <b class="price"> 380&#8381;<span class="hits-price">/кг</span></b>
           <a class="title" href="#">Сливочно-кофейное с кусочками шоколада</a>
           <div class="hidden">
-              <a class="btn" href="#">Быстрый просмотр</a></div>
+            <a class="btn" href="#">Быстрый просмотр</a></div>
         </article>
         <article class="hits-item hit">
           <img src="img/3-355.jpg" alt="мороженое" width="267" height="267">
           <b class="price">355&#8381;<span class="hits-price">/кг</span></b>
           <a class="title" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
           <div class="hidden">
-              <a class="btn" href="#">Быстрый просмотр</a></div>
+            <a class="btn" href="#">Быстрый просмотр</a></div>
         </article>
         <article class="hits-item hit">
           <img src="img/4-415.jpg" alt="мороженое" width="267" height="267">
           <b class="price">415&#8381;<span class="hits-price">/кг</span></b>
           <a class="title" href="#">Сливочное крем-брюле с карамельной подливкой</a>
           <div class="hidden">
-              <a class="btn" href="#">Быстрый просмотр</a></div>
+            <a class="btn" href="#">Быстрый просмотр</a></div>
         </article>
       </section>
       <section class="features">
@@ -161,7 +161,8 @@
         <div class="news-right">
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
           <form class="subscribe" action="https://echo.htmlacademy.ru/" method="post">
-            <input type="email" name="email" placeholder="Электронная почта">
+              <input type="email" name="email" id="email-new">
+              <label for="email-new">Электронная почта</label>
             <input class="btn" type="submit" value="Отправить">
           </form>
         </div>
@@ -172,11 +173,14 @@
         <!--КАРТА и АДРЕСС-->
         <img src="img/map.jpg" alt="Карта" width="1200" height="430">
         <div class="address">
-          <p>Адрес главного офиса <br> и офлайн магазина:<br>
+                                      Адрес главного офиса <br>
+                                       и офлайн магазина:<br>
             <span class="address-bold">ул. Большая Конюшенная<br>
-                             19/8, Санкт-Петербург</span>
-            <br><br> Для заказов по телефону:<br>
-            <span class="address-bold2">8 812 450-25-25</span> (с 10 до 20 ежедневно)</p>
+                                      19/8, Санкт-Петербург</span>
+                                      <br><br>
+                                      Для заказов по телефону:<br>
+            <span class="address-bold2">8 812 450-25-25</span>
+                                      (с 10 до 20 ежедневно)
           <a class="btn" href="#">Форма обратной связи</a>
         </div>
       </section>
@@ -195,25 +199,29 @@
         </section>
         <section class="footer-copyright">
           <img src="img/logo-htmlacademy.png" alt="Htmlacademy.ru" width="108" height="38">
-          <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &#64;2016</p>
+          <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a>&#64; 2017</p>
         </section>
       </div>
     </footer>
-    <fieldset class="feedback">
-      <legend>
+    <div class="modal-feedback">
+      <b class="modal-title">
         Мы обязательно вам ответим!
-      </legend>
+      </b>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <input type="text" name="login" placeholder="Как вас зовут?">
-        <input type="email" name="email" placeholder="Ваша почта для ответа?">
-        <textarea name="comment">Напишите что-нибудь...</textarea>
-        <div class="buttons">
-          <input type="submit" value="Отправить">
+        <input type="text" name="login" id="name-field">
+        <label for="name-field">Как вас зовут?</label>
+        <input type="email" name="email" id="your-email-field">
+        <label for="your-email-field">Ваша почта для ответа?</label>
+        <textarea name="comment" rows="6" id="write-field"></textarea>
+        <label for="write-field">Напишите что-нибудь...</label>
+        <div class="feedback-send">
+          <input class="btn" type="submit" value="Отправить">
         </div>
       </form>
-    </fieldset>
-    <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+    </div>
   </div>
+  <div class="modal-overlay"></div>
 </body>
 
 </html>

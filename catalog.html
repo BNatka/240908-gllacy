@@ -40,8 +40,8 @@
           <a class="search-btn" href="#">Поиск</a>
           <div class="search-form">
             <form action="https://echo.htmlacademy.ru" method="post">
-              <label for="search"></label>
-              <input type="search" name="search" placeholder="Что ищем?" id="search">
+              <input type="search" name="search" id="search-field">
+              <label for="search-field">Что ищем?</label>
               <div class="buttons">
                 <input type="submit" value="Поиск">
               </div>
@@ -52,8 +52,10 @@
           <a class="login" href="#">Вход</a>
           <fieldset class="login-form">
             <form action="https://echo.htmlacademy.ru" method="post">
-              <input type="email" name="email" placeholder="Электронная почта" required>
-              <input type="text" name="password" id="password-field" placeholder="Пароль">
+              <input type="email" name="email" id="email-field" required>
+              <label for="email-field">Электронная почта</label>
+              <input type="password" name="password" id="password-field" required>
+              <label for="password-field">Пароль</label>
               <input class="btn" type="submit" value="Войти">
               <a href="#">Забыли пароль?</a>
               <a href="#">Новая регистрация</a>
@@ -154,23 +156,23 @@
               <legend class="filter-name">Наполнители:</legend>
               <div class="topping-style">
                 <div class="filter-topping-item">
-                  <input type="radio" name="topping" value="шоколад" id="filter-topping1" checked>
+                  <input type="checkbox" name="topping" value="шоколад" id="filter-topping1" checked>
                   <label for="filter-topping1">Шоколадные</label>
                 </div>
                 <div class="filter-topping-item">
-                  <input type="radio" name="topping" value="сахарные присыпки" id="filter-topping2">
+                  <input type="checkbox" name="topping" value="сахарные присыпки" id="filter-topping2" checked>
                   <label for="filter-topping2">Сахарные присыпки</label>
                 </div>
                 <div class="filter-topping-item">
-                  <input type="radio" name="topping" value="фрукты" id="filter-topping3">
+                  <input type="checkbox" name="topping" value="фрукты" id="filter-topping3">
                   <label for="filter-topping3">Фрукты</label>
                 </div>
                 <div class="filter-topping-item">
-                  <input type="radio" name="topping" value="сиропы" id="filter-topping4">
+                  <input type="checkbox" name="topping" value="сиропы" id="filter-topping4">
                   <label for="filter-topping4">Сиропы</label>
                 </div>
                 <div class="filter-topping-item">
-                  <input type="radio" name="topping" value="джемы" id="filter-topping5">
+                  <input type="checkbox" name="topping" value="джемы" id="filter-topping5">
                   <label for="filter-topping5">Джемы</label>
                 </div>
               </div>
