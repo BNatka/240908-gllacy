@@ -671,11 +671,15 @@ fieldset {
   position: relative;
 }
 
+.form-style {
+  position: relative;
+}
+
 .form-style::after {
   content: "";
   position: absolute;
-  top: 37px;
-  right: 16px;
+  top: 15px;
+  right: 14px;
   background: url("../img/marker1.png");
   width: 9px;
   height: 5px;
@@ -684,8 +688,8 @@ fieldset {
 .form-style:hover::after {
   content: "";
   position: absolute;
-  top: 37px;
-  right: 16px;
+  top: 15px;
+  right: 14px;
   background: url("../img/marker2.png");
   width: 9px;
   height: 5px;
@@ -961,7 +965,7 @@ select[name="sorting"]:hover {
   float: left;
   width: 145px;
   margin-right: 0px;
-  margin-top: 35px;
+  margin-top: 34px;
 }
 
 .filter-btn {
