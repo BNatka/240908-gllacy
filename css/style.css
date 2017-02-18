@@ -26,6 +26,7 @@ fieldset {
   min-width: 1200px;
   background-position: top center;
   background-repeat: no-repeat;
+  -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
   transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
@@ -272,6 +273,7 @@ fieldset {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -381,17 +383,20 @@ fieldset {
   text-decoration: none;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
   background: #f26843;
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
   background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   border-radius: 100px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
 .btn:hover {
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .btn:active {
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
@@ -650,7 +655,6 @@ fieldset {
   color: #ffffff;
   font-weight: bold;
   font-family: "Roboto", "Arial", sans-serif;
-  ;
 }
 
 .filter {
@@ -664,6 +668,31 @@ fieldset {
   margin: 0;
   margin-right: 15px;
   padding: 0;
+  position: relative;
+}
+
+.form-style {
+  position: relative;
+}
+
+.form-style::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 14px;
+  background: url("../img/marker1.png");
+  width: 9px;
+  height: 5px;
+}
+
+.form-style:hover::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 14px;
+  background: url("../img/marker2.png");
+  width: 9px;
+  height: 5px;
 }
 
 .sort .filter-name {
@@ -681,9 +710,10 @@ fieldset {
 
 select[name="sorting"] {
   background: rgba(255, 255, 255, 0.2);
-  padding: 7px;
-  padding-left: 12px;
-  padding-right: 14px;
+  padding-top: 7px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+  padding-right: 32px;
   border-radius: 20px;
   font-size: 16px;
   line-height: 18px;
@@ -692,6 +722,9 @@ select[name="sorting"] {
   color: #ffffff;
   cursor: pointer;
   border: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 select[name="sorting"]:hover {
@@ -932,7 +965,7 @@ select[name="sorting"]:hover {
   float: left;
   width: 145px;
   margin-right: 0px;
-  margin-top: 35px;
+  margin-top: 34px;
 }
 
 .filter-btn {
@@ -990,17 +1023,20 @@ select[name="sorting"]:hover {
   text-decoration: none;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
   background: #f26843;
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
   background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   border-radius: 100px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
 .slider-btn:hover {
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .slider-btn:active {
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
@@ -1250,7 +1286,7 @@ select[name="sorting"]:hover {
   padding-top: 25px;
   padding-bottom: 15px;
   min-height: 266px;
-  background: #ede2c8 url("../img/Bg-vaffel.jpg") repeat;
+  background: #ede2c8 url("../img/bgg-vaffel.jpg") repeat;
   border-radius: 15px;
 }
 
