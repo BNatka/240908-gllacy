@@ -1033,26 +1033,26 @@ select[name="sorting"]:hover {
   display: none;
 }
 
-#slider-input-1:checked~.site-wrapper #slide1, #slider-input-2:checked~.site-wrapper #slide2, #slider-input-3:checked~.site-wrapper #slide3 {
+.first:checked~.site-wrapper .slide1, .second:checked~.site-wrapper .slide2, .third:checked~.site-wrapper .slide3 {
   display: block;
 }
 
-#slider-input-1:checked~.site-wrapper {
+.first:checked~.site-wrapper {
   background-color: #849d8f;
   background-image: url("../img/ice-1.png");
 }
 
-#slider-input-2:checked~.site-wrapper {
+.second:checked~.site-wrapper {
   background-color: #8996a6;
   background-image: url("../img/ice-2.png");
 }
 
-#slider-input-3:checked~.site-wrapper {
+.third:checked~.site-wrapper {
   background-color: #9d8b84;
   background-image: url("../img/ice-3.png");
 }
 
-#slider-input-1:checked~.site-wrapper label[for="slider-input-1"], #slider-input-2:checked~.site-wrapper label[for="slider-input-2"], #slider-input-3:checked~.site-wrapper label[for="slider-input-3"] {
+.first:checked~.site-wrapper label[for="slider-input-1"], .second:checked~.site-wrapper label[for="slider-input-2"], .third:checked~.site-wrapper label[for="slider-input-3"] {
   background-color: #ffffff;
 }
 
