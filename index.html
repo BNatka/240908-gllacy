@@ -56,10 +56,10 @@
           <a class="login" href="#">Вход</a>
           <div class="login-form">
             <form action="https://echo.htmlacademy.ru" method="post">
+              <input type="email" name="email" id="email-field" required>
               <label for="email-field">Электронная почта</label>
-              <input type="email" name="email" id="email-field" placeholder="Электронная почта" required>
+              <input type="password" name="password" id="password-field" required>
               <label for="password-field">Пароль</label>
-              <input type="text" name="password" id="password-field" placeholder="Пароль">
               <input class="btn" type="submit" value="Войти">
               <a href="#">Забыли пароль?</a>
               <a href="#">Новая регистрация</a>
@@ -161,8 +161,8 @@
         <div class="news-right">
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
           <form class="subscribe" action="https://echo.htmlacademy.ru/" method="post">
-            <label for="email-new">Электронная почта</label>
-            <input type="email" name="email" id="email-new" placeholder="Электронная почта">
+              <input type="email" name="email" id="email-new">
+              <label for="email-new">Электронная почта</label>
             <input class="btn" type="submit" value="Отправить">
           </form>
         </div>
@@ -173,11 +173,14 @@
         <!--КАРТА и АДРЕСС-->
         <img src="img/map.jpg" alt="Карта" width="1200" height="430">
         <div class="address">
-          <p>Адрес главного офиса <br> и офлайн магазина:<br>
+                                      Адрес главного офиса <br>
+                                       и офлайн магазина:<br>
             <span class="address-bold">ул. Большая Конюшенная<br>
-                             19/8, Санкт-Петербург</span>
-            <br><br> Для заказов по телефону:<br>
-            <span class="address-bold2">8 812 450-25-25</span> (с 10 до 20 ежедневно)</p>
+                                      19/8, Санкт-Петербург</span>
+                                      <br><br>
+                                      Для заказов по телефону:<br>
+            <span class="address-bold2">8 812 450-25-25</span>
+                                      (с 10 до 20 ежедневно)
           <a class="btn" href="#">Форма обратной связи</a>
         </div>
       </section>
@@ -196,7 +199,7 @@
         </section>
         <section class="footer-copyright">
           <img src="img/logo-htmlacademy.png" alt="Htmlacademy.ru" width="108" height="38">
-          <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &#64;2016</p>
+          <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a>&#64; 2017</p>
         </section>
       </div>
     </footer>
@@ -205,12 +208,12 @@
         Мы обязательно вам ответим!
       </b>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <input type="text" name="login" id="name-field">
         <label for="name-field">Как вас зовут?</label>
-        <input type="text" name="login" id="name-field" placeholder="Как вас зовут?">
+        <input type="email" name="email" id="your-email-field">
         <label for="your-email-field">Ваша почта для ответа?</label>
-        <input type="email" name="email" id="your-email-field" placeholder="Ваша почта для ответа?">
-        <labal for="write-field">Напишите что-нибудь...</labal>
-        <textarea name="comment" rows="6" id="write-field" placeholder="Напишите что-нибудь..."></textarea>
+        <textarea name="comment" rows="6" id="write-field"></textarea>
+        <label for="write-field">Напишите что-нибудь...</label>
         <div class="feedback-send">
           <input class="btn" type="submit" value="Отправить">
         </div>
