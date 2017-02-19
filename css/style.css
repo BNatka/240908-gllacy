@@ -87,21 +87,32 @@ fieldset {
   display: block;
   color: #ffffff;
   padding: 7px 14px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  font-family: "Roboto", "Arial", sans-serif;
   border-radius: 50px;
+  text-decoration: none;
 }
 
 .main-navigation a:hover {
   background-color: #f7f6f3;
   color: #333333;
-  text-decoration: none;
+  border-bottom: none;
 }
 
-.main-navigation a:active {
+.main-navigation>a:active {
   box-shadow: inset 0 2px 2px 0 #696969;
 }
 
 .main-navigation li:hover .active-menu {
   display: block;
+}
+
+.main-navigation li:hover>a {
+  background-color: #f7f6f3;
+  color: #333333;
+  text-decoration: none;
 }
 
 .main-navigation .active {
@@ -112,7 +123,7 @@ fieldset {
 .active-menu {
   position: absolute;
   top: 38px;
-  left: -7px;
+  left: -6px;
   display: none;
   z-index: 2;
   list-style: none;
@@ -144,6 +155,10 @@ fieldset {
   background: rgba(53, 53, 53, 0.2);
 }
 
+.active-menu li:last-child {
+  padding-bottom: 2px;
+}
+
 .active-menu a {
   display: block;
   padding-left: 20px;
@@ -156,24 +171,25 @@ fieldset {
   border-radius: 0;
 }
 
-.active-menu a:hover {
-  color: #e84d37;
-}
-
-.active-menu .new a {
+.active-menu .new {
   font-weight: bold;
 }
 
-.active-menu a:hover {
+.active-menu li:hover a:not(.menu-check) {
   background-color: #fbded7;
 }
 
-.active-menu a:active {
+.active-menu li:active a:active:not(.menu-check) {
   background-color: #f6b5a5;
   box-shadow: none;
 }
 
-.active-menu .active {
+.active-menu .menu-check {
+  color: #ffffff;
+  background-color: #d07058;
+}
+
+.active-menu .menu-check:hover {
   color: #ffffff;
   background-color: #d07058;
 }
@@ -280,6 +296,14 @@ fieldset {
 .search-btn:hover::before, .search-btn:hover {
   background-color: rgba(248, 247, 244, 1);
   background-position: -266px -161px;
+}
+
+.search:hover .search-btn::before {
+  background-position: -266px -161px;
+}
+
+.search:hover .search-btn {
+  background-color: rgba(248, 247, 244, 1);
 }
 
 .user-block {
@@ -410,6 +434,10 @@ fieldset {
   font-weight: normal;
 }
 
+.login-form a:hover {
+  color: #e84d37;
+}
+
 .login-form .btn {
   float: left;
   width: 100px;
@@ -457,6 +485,15 @@ fieldset {
   background-position: -36px -188px;
 }
 
+.user-block:hover .login {
+  background-color: rgba(248, 247, 244, 1);
+  color: #323232;
+}
+
+.user-block:hover .login::before {
+  background-position: -36px -188px;
+}
+
 .basket {
   float: left;
   position: relative;
@@ -485,6 +522,7 @@ fieldset {
   font-size: 13px;
   line-height: 16px;
   border-radius: 5px;
+  z-index: 5;
 }
 
 .basket-full-1 {
@@ -500,27 +538,27 @@ fieldset {
   cursor: pointer;
 }
 
-.col0 {
+.col-0 {
   padding-top: 0px;
   padding-right: 10px;
 }
 
-.col1 {
+.col-1 {
   padding-top: 3px;
   padding-right: 10px;
 }
 
-.col2 {
+.col-2 {
   width: 220px;
   padding-right: 10px;
   text-align: left;
 }
 
-.col3 {
+.col-3 {
   width: 115px;
 }
 
-.col4 {
+.col-4 {
   width: 80px;
 }
 
@@ -554,10 +592,11 @@ fieldset {
   position: relative;
   width: 59px;
   padding: 8px 12px;
-  padding-left: 47px;
+  padding-left: 46px;
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 14px;
   line-height: 16px;
+  font-weight: 500;
   text-align: left;
   color: #ffffff;
   text-decoration: none;
@@ -575,9 +614,13 @@ fieldset {
   background-position: -197px -5px;
 }
 
-.basket-btn:hover, .basket-btn:hover::before {
-  opacity: 1;
+.basket.plus .basket-btn {
+  background-color: rgba(248, 247, 244, 1);
   color: #323232;
+  background-position: -228px -5px;
+}
+
+.basket.plus .basket-btn::before {
   background-position: -228px -5px;
 }
 
@@ -619,7 +662,7 @@ fieldset {
 }
 
 .breadcrumbs a:hover {
-  color: #e84d37;
+  color: #ffbc9e;
 }
 
 .schedule {
@@ -708,10 +751,10 @@ fieldset {
   font-weight: 500;
 }
 
-select[name="sorting"] {
+.sort select[name="sorting"] {
   background: rgba(255, 255, 255, 0.2);
   padding-top: 7px;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   padding-left: 16px;
   padding-right: 32px;
   border-radius: 20px;
@@ -727,7 +770,7 @@ select[name="sorting"] {
   -webkit-appearance: none;
 }
 
-select[name="sorting"]:hover {
+.sort select[name="sorting"]:hover {
   background: rgba(255, 255, 255, 1);
   color: #323232;
 }
@@ -965,7 +1008,7 @@ select[name="sorting"]:hover {
   float: left;
   width: 145px;
   margin-right: 0px;
-  margin-top: 34px;
+  margin-top: 35px;
 }
 
 .filter-btn {
@@ -1069,7 +1112,7 @@ select[name="sorting"]:hover {
   display: none;
 }
 
-.first:checked~.site-wrapper .slide1, .second:checked~.site-wrapper .slide2, .third:checked~.site-wrapper .slide3 {
+.first:checked~.site-wrapper .slide-1, .second:checked~.site-wrapper .slide-2, .third:checked~.site-wrapper .slide-3 {
   display: block;
 }
 
@@ -1175,6 +1218,7 @@ select[name="sorting"]:hover {
 
 .hits {
   font-size: 0;
+  margin-bottom: 1px;
 }
 
 .hits-item {
@@ -1184,7 +1228,7 @@ select[name="sorting"]:hover {
   font-size: 0;
   width: 267px;
   margin-right: 26px;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
   text-align: center;
 }
 
@@ -1193,10 +1237,10 @@ select[name="sorting"]:hover {
   background: rgba(255, 255, 255, 0.3);
   position: absolute;
   top: -5px;
-  left: -10px;
+  left: -13px;
   z-index: 2;
   width: 292px;
-  height: calc(100% + 63px);
+  height: calc(100% + 77px);
   border-radius: 5px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
@@ -1232,20 +1276,27 @@ select[name="sorting"]:hover {
 }
 
 .hits-item .title {
-  display: inline-block;
+  display: inline;
   position: relative;
-  bottom: -3px;
-  padding: 0px 5px;
+  bottom: -4px;
+  left: -4px;
+  padding: 0px 4px;
   z-index: 2;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 16px;
   font-weight: 500;
   color: #ffffff;
   margin-bottom: 20px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: "Roboto", "Arial", sans-serif;
+  margin-right: -11px;
+  margin-left: 5px;
+  text-align: center;
 }
 
 .hits-item:hover .title {
-  text-decoration: none;
+  border-bottom: none;
 }
 
 .hits-item .hidden {
@@ -1254,7 +1305,7 @@ select[name="sorting"]:hover {
   z-index: 3;
   left: 0;
   right: 0;
-  bottom: -35px;
+  bottom: -50px;
 }
 
 .hits-item:hover .hidden {
@@ -1279,12 +1330,12 @@ select[name="sorting"]:hover {
   display: inline-block;
   vertical-align: middle;
   text-align: left;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
   width: 1116px;
   padding-left: 20px;
   padding-right: 10px;
   padding-top: 25px;
-  padding-bottom: 15px;
+  padding-bottom: 12px;
   min-height: 266px;
   background: #ede2c8 url("../img/bgg-vaffel.jpg") repeat;
   border-radius: 15px;
@@ -1472,15 +1523,11 @@ select[name="sorting"]:hover {
   border: 0;
 }
 
-.main-footer {
-  margin-top: 38px;
-}
-
 .map {
   width: 1200px;
   position: relative;
   margin: 0 auto;
-  margin-bottom: 15px;
+  margin-top: 38px;
 }
 
 .address {
@@ -1504,7 +1551,7 @@ select[name="sorting"]:hover {
   font-weight: bold;
 }
 
-.address-bold2 {
+.address-bold-2 {
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
@@ -1532,7 +1579,7 @@ select[name="sorting"]:hover {
 .paginator {
   width: 185px;
   float: right;
-  margin-bottom: 15px;
+  margin-bottom: 37px;
   position: relative;
 }
 
@@ -1596,6 +1643,11 @@ select[name="sorting"]:hover {
   position: absolute;
   top: -5px;
   left: 11px;
+}
+
+.main-footer {
+  margin-bottom: 25px;
+  margin-top: 16px;
 }
 
 .footer-social {
@@ -1675,18 +1727,28 @@ select[name="sorting"]:hover {
   left: 0;
 }
 
-.about-simple:nth-child(2n) {
-  margin-right: 0;
-}
-
 .footer-about a {
   font-size: 13px;
   line-height: 18px;
   color: #ffffff;
+  text-decoration: none;
 }
 
-.footer-about a:hover {
-  color: #e84d37;
+.about-simple span {
+  font-size: 13px;
+  line-height: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-simple:nth-child(2n) {
+  margin-right: 0;
+}
+
+.about-simple span:hover {
+  color: #ffbc9e;
+  border-bottom: 1px solid #ffbc9e;
 }
 
 .footer-about a:first-child {
@@ -1720,9 +1782,12 @@ select[name="sorting"]:hover {
 }
 
 .footer-copyright a {
+  display: inline;
   color: #ffffff;
   font-size: 12px;
   line-height: 18px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .footer-copyright a:hover {
@@ -1730,8 +1795,8 @@ select[name="sorting"]:hover {
 }
 
 .modal-feedback {
-  display: none;
-  position: absolute;
+  display: block;
+  position: fixed;
   top: 340px;
   left: 50%;
   width: 480px;
