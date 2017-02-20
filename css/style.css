@@ -105,6 +105,10 @@ fieldset {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.main-navigation span:hover {
+  border-bottom: none;
+}
+
 .main-navigation>a:active {
   box-shadow: inset 0 2px 2px 0 #696969;
 }
@@ -122,6 +126,10 @@ fieldset {
 .main-navigation .active {
   background-color: #d07058;
   box-shadow: none;
+}
+
+.active span {
+  border-bottom: none;
 }
 
 .active-menu {
@@ -219,18 +227,24 @@ fieldset {
   left: -307px;
   width: 310px;
   padding: 20px 15px;
-  padding-bottom: 0px;
   background: #f8f7f4;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   color: #323232;
 }
 
-.search-form input {
-  width: 100%;
-  padding: 9px 12px;
-  margin-bottom: 18px;
+.form-field input[placeholder] {
   font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #999999;
+}
+
+.search-form input {
+  width: 90%;
+  padding: 9px 12px;
+  margin: 0;
+  font-size: 16px;
   line-height: 24px;
   color: #323232;
   font-family: "Roboto", "Arial", sans-serif;
@@ -239,7 +253,32 @@ fieldset {
   border-radius: 5px;
 }
 
+.search-form input[type="search"]::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.search-form input[type="search"]::-moz-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.search-form input[type="search"]:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.search-form input[type="search"]::placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
 .search-form label {
+  display: none;
   position: absolute;
   top: 30px;
   left: 30px;
@@ -259,6 +298,7 @@ fieldset {
 }
 
 .search-form input:focus+label {
+  display: block;
   position: absolute;
   top: 5px;
   left: 30px;
@@ -351,7 +391,36 @@ fieldset {
   border-radius: 5px;
 }
 
+.login-form input[type="password"] {
+  margin-top: 5px;
+}
+
+.login-form input[type="email"]::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.login-form input[type="email"]::-moz-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.login-form input[type="email"]:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.login-form input[type="email"]::placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
 .login-form label[for="email-field"] {
+  display: none;
   position: absolute;
   top: 30px;
   left: 33px;
@@ -371,6 +440,7 @@ fieldset {
 }
 
 .login-form input:focus+label[for="email-field"] {
+  display: block;
   position: absolute;
   top: 5px;
   left: 30px;
@@ -380,7 +450,32 @@ fieldset {
   font-weight: normal;
 }
 
+input[type="password"]::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+input[type="password"]::-moz-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+input[type="password"]:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+input[type="password"]::placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
 .login-form label[for="password-field"] {
+  display: none;
   position: absolute;
   top: 95px;
   left: 33px;
@@ -391,6 +486,7 @@ fieldset {
 }
 
 .login-form input:focus+label[for="password-field"] {
+  display: block;
   position: absolute;
   top: 68px;
   left: 30px;
@@ -663,10 +759,22 @@ fieldset {
   color: #ffffff;
   font-size: 14px;
   line-height: 16px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+.breadcrumbs a:last-child {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  border-bottom: none;
+}
+
 
 .breadcrumbs a:hover {
   color: #ffbc9e;
+  border-bottom: 1px solid #ffbc9e;
 }
 
 .schedule {
@@ -1483,7 +1591,32 @@ fieldset {
   border-radius: 5px;
 }
 
+.subscribe input[type="email"]::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.subscribe input[type="email"]::-moz-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.subscribe input[type="email"]:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.subscribe input[type="email"]::placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
 .subscribe label[for="email-new"] {
+  display: none;
   position: absolute;
   top: 12px;
   left: 14px;
@@ -1503,6 +1636,7 @@ fieldset {
 }
 
 .subscribe input[type="email"]:focus+label[for="email-new"] {
+  display: block;
   position: absolute;
   top: -12px;
   left: 10px;
@@ -1850,11 +1984,25 @@ fieldset {
   position: relative;
 }
 
-.feedback-form input[type="text"], .feedback-form input[type="email"] {
+.feedback-form input[type="text"] {
   width: 193px;
-  padding: 10px;
+  padding: 11px 10px;
   padding-right: 54px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(178, 178, 178, 0.5);
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #323232;
+  font-weight: bold;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.feedback-form input[type="email"] {
+  width: 193px;
+  padding: 11px 10px;
+  padding-right: 54px;
+  margin-bottom: 28px;
   border: 1px solid rgba(178, 178, 178, 0.5);
   border-radius: 5px;
   font-size: 16px;
@@ -1865,6 +2013,7 @@ fieldset {
 }
 
 .feedback-form label[for="name-field"] {
+  display: none;
   position: absolute;
   top: 12px;
   left: 10px;
@@ -1875,6 +2024,7 @@ fieldset {
 }
 
 .feedback-form input[type="text"]:focus+label[for="name-field"] {
+  display: block;
   position: absolute;
   top: -15px;
   left: 10px;
@@ -1884,7 +2034,56 @@ fieldset {
   font-weight: normal;
 }
 
+.feedback-form input[type="text"]::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.feedback-form input[type="text"]::-moz-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.feedback-form input[type="text"]:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.feedback-form input[type="text"]::placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.feedback-form input[type="email"]::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.feedback-form input[type="email"]::-moz-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.feedback-form input[type="email"]:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.feedback-form input[type="email"]::placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
 .feedback-form label[for="your-email-field"] {
+  display: none;
   position: absolute;
   top: 75px;
   left: 10px;
@@ -1895,6 +2094,7 @@ fieldset {
 }
 
 .feedback-form input[type="email"]:focus+label[for="your-email-field"] {
+  display: block;
   position: absolute;
   top: 50px;
   left: 10px;
@@ -1919,6 +2119,7 @@ fieldset {
 }
 
 .feedback-form label[for="write-field"] {
+  display: none;
   position: absolute;
   top: 145px;
   left: 10px;
@@ -1928,9 +2129,34 @@ fieldset {
   color: #999999;
 }
 
+.feedback-form textarea[name="comment"]::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.feedback-form textarea[name="comment"]::-moz-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.feedback-form textarea[name="comment"]:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.feedback-form textarea[name="comment"]::placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
 .feedback-form textarea[name="comment"]:focus+label[for="write-field"] {
+  display: block;
   position: absolute;
-  top: 115px;
+  top: 122px;
   left: 10px;
   color: #5b9ddf;
   font-size: 11px;
