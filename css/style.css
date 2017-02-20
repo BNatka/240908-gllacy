@@ -763,6 +763,15 @@ input[type="password"]::placeholder {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.breadcrumbs a:last-child {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+
 .breadcrumbs a:hover {
   color: #ffbc9e;
   border-bottom: 1px solid #ffbc9e;
@@ -1924,7 +1933,7 @@ input[type="password"]::placeholder {
 }
 
 .modal-feedback {
-  display: block;
+  display: none;
   position: fixed;
   top: 340px;
   left: 50%;
