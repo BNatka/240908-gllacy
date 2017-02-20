@@ -1929,7 +1929,7 @@ input[type="password"]::placeholder {
 }
 
 .modal-feedback {
-  display: block;
+  display: none;
   position: fixed;
   top: 340px;
   left: 50%;
@@ -1944,12 +1944,13 @@ input[type="password"]::placeholder {
   left: 0;
   right: 0;
   margin: 0 auto;
-  transform: translateY(-50%)
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .modal-overlay {
   position: fixed;
-  display: block;
+  display: none;
   top: 0;
   left: 0;
   z-index: 10;
