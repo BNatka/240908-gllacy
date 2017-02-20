@@ -18,8 +18,7 @@
         </div>
         <nav class="main-navigation">
           <ul>
-            <li>
-              <a class="active"><span>Каталог</span></a>
+            <li><a class="active"><span>Каталог</span></a>
               <ul class="active-menu">
                 <li><a class="new" href="#">Новинки</a></li>
                 <li><a class="menu-check">Сливочное</a></li>
@@ -28,12 +27,8 @@
                 <li><a href="#">Мелорин</a></li>
               </ul>
             </li>
-            <li>
-              <a href="#">Доставка и оплата</a>
-            </li>
-            <li>
-              <a href="#">О Компании</a>
-            </li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">О Компании</a></li>
           </ul>
         </nav>
         <div class="search">
@@ -50,10 +45,14 @@
           <a class="login" href="#">Вход</a>
           <fieldset class="login-form">
             <form action="https://echo.htmlacademy.ru" method="post">
-              <input type="email" name="email" id="email-field" placeholder="Электронная почта" required>
-              <label for="email-field">Электронная почта</label>
-              <input type="password" name="password" id="password-field" placeholder="Пароль" required>
-              <label for="password-field">Пароль</label>
+              <div class="login-form-email">
+                <input type="email" name="email" id="email-field" placeholder="Электронная почта" required>
+                <label for="email-field">Электронная почта</label>
+              </div>
+              <div class="login-form-pass">
+                <input type="password" name="password" id="password-field" placeholder="Пароль" required>
+                <label for="password-field">Пароль</label>
+              </div>
               <input class="btn" type="submit" value="Войти">
               <a href="#">Забыли пароль?</a>
               <a href="#">Новая регистрация</a>
@@ -81,7 +80,8 @@
             </table>
             <hr>
             <div>
-              <span class="basket-price">Итого: 750 руб.</span></div>
+              <span class="basket-price">Итого: 750 руб.</span>
+            </div>
             <div class="btn">
               <a href="#">Оформить заказ</a>
             </div>
@@ -95,7 +95,7 @@
           <ul>
             <li><a href="index.html">Главная</a></li>
             <li><a href="#">Каталог</a></li>
-            <li><a>Сливочное</a></li>
+            <li><a class="breadcrumbs-page">Сливочное</a></li>
           </ul>
         </div>
       </div>
