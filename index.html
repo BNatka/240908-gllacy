@@ -33,10 +33,10 @@
               </ul>
             </li>
             <li>
-              <a href="#">Доставка и оплата</a>
+              <a href="#"><span>Доставка и оплата</span></a>
             </li>
             <li>
-              <a href="#">О Компании</a>
+              <a href="#"><span>О Компании</span></a>
             </li>
           </ul>
         </nav>
@@ -44,7 +44,7 @@
           <a class="search-btn" href="#">Поиск</a>
           <div class="search-form">
             <form action="https://echo.htmlacademy.ru" method="post">
-              <input type="search" name="search" id="search-field">
+              <input type="search" name="search" id="search-field" placeholder="Что ищем?">
               <label for="search-field">Что ищем?</label>
               <input class="buttons" type="submit" value="Поиск">
             </form>
@@ -54,9 +54,9 @@
           <a class="login" href="#">Вход</a>
           <div class="login-form">
             <form action="https://echo.htmlacademy.ru" method="post">
-              <input type="email" name="email" id="email-field" required>
+              <input type="email" name="email" id="email-field" placeholder="Электронная почта" required>
               <label for="email-field">Электронная почта</label>
-              <input type="password" name="password" id="password-field" required>
+              <input type="password" name="password" id="password-field" placeholder="Пароль" required>
               <label for="password-field">Пароль</label>
               <input class="btn" type="submit" value="Войти">
               <a href="#">Забыли пароль?</a>
@@ -163,7 +163,7 @@
         <div class="news-right">
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
           <form class="subscribe" action="https://echo.htmlacademy.ru/" method="post">
-            <input type="email" name="email" id="email-new">
+            <input type="email" name="email" id="email-new" placeholder="Электронная почта">
             <label for="email-new">Электронная почта</label>
             <input class="btn" type="submit" value="Отправить">
           </form>
@@ -205,11 +205,11 @@
         Мы обязательно вам ответим!
       </b>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <input type="text" name="login" id="name-field">
+        <input type="text" name="login" id="name-field" placeholder="Как вас зовут?">
         <label for="name-field">Как вас зовут?</label>
-        <input type="email" name="email" id="your-email-field">
+        <input type="email" name="email" id="your-email-field" placeholder="Ваша почта для ответа?">
         <label for="your-email-field">Ваша почта для ответа?</label>
-        <textarea name="comment" rows="6" id="write-field"></textarea>
+        <textarea name="comment" rows="6" id="write-field" placeholder="Напишите что-нибудь..."></textarea>
         <label for="write-field">Напишите что-нибудь...</label>
         <div class="feedback-send">
           <input class="feedback-send btn" type="submit" value="Отправить">
