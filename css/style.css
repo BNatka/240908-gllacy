@@ -878,6 +878,10 @@ input[type="password"]::placeholder {
   -webkit-appearance: none;
 }
 
+.marker::-ms-expand {
+  display: none;
+}
+
 .sort select[name="sorting"]:hover {
   background: rgba(255, 255, 255, 1);
   color: #323232;
@@ -1777,7 +1781,7 @@ input[type="password"]::placeholder {
 }
 
 .main-footer {
-  margin-bottom: 25px;
+  padding-bottom: 25px;
   margin-top: 16px;
 }
 
