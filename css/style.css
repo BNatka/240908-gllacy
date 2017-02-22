@@ -16,6 +16,11 @@ fieldset {
   border: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .clearfix::after {
   content: "";
   display: table;
@@ -1038,20 +1043,13 @@ input[type="password"]::placeholder {
   background: #ffffff;
 }
 
-/*.filter-fat-item input[type="radio"]:disabled+label::after {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #ffffff;
-  opacity: 0.4;
+.filter-fat-item input[type="radio"]:disabled+label::before {
+  border-color: rgba(255, 255, 255, 0.4);
+}
 
-}*/
-
-
+.filter-fat-item input[type="radio"]:checked:disabled+label::after {
+  background: rgba(255, 255, 255, 0.4);
+}
 
 .filter-topping {
   float: left;
@@ -1127,6 +1125,20 @@ input[type="password"]::placeholder {
   left: -31px;
   top: -1px;
   background: url("../img/checkbox.png");
+  width: 20px;
+  height: 20px;
+}
+
+.filter-topping input[type="checkbox"]:disabled+label::before {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.filter-topping input[type="checkbox"]:checked:disabled+label::after {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: -1px;
+  background: url("../img/checkbox-d.png");
   width: 20px;
   height: 20px;
 }
@@ -1271,7 +1283,7 @@ input[type="password"]::placeholder {
   position: relative;
   float: left;
   width: 520px;
-  min-height: 212px;
+  min-height: 195px;
   margin-right: 26px;
   background: #c80036 url("../img/bg-raspberry.jpg") repeat;
   text-align: left;
@@ -1279,60 +1291,60 @@ input[type="password"]::placeholder {
   padding-right: 20px;
   padding-left: 19px;
   padding-top: 16px;
+  padding-bottom: 19px;
   border-radius: 15px;
 }
 
 .promotion-left p {
   margin: 0;
   margin-top: 15px;
+  margin-bottom: 45px;
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
 }
 
 .promotion-left .btn {
-  position: relative;
+  float: right;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
   text-shadow: none;
   padding: 10px 21px;
   padding-bottom: 13px;
-  bottom: -45px;
-  right: -356px;
 }
 
 .promotion-right {
   position: relative;
   float: right;
   width: 520px;
-  min-height: 212px;
+  min-height: 195px;
   background: #5d3923 url("../img/bg-chocolate.jpg") repeat;
   border-radius: 15px;
   margin: 0;
   padding-right: 20px;
   padding-left: 19px;
   padding-top: 16px;
+  padding-bottom: 19px;
 }
 
 .promotion-right p {
   margin: 0;
   margin-top: 15px;
+  margin-bottom: 45px;
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
 }
 
 .promotion-right .btn {
-  position: relative;
+  float: right;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
   text-shadow: none;
   padding: 10px 21px;
   padding-bottom: 11px;
-  bottom: -44px;
-  right: -332px;
 }
 
 .promotion-name {
@@ -1343,7 +1355,7 @@ input[type="password"]::placeholder {
 
 .hits {
   font-size: 0;
-  margin-bottom: 1px;
+  margin-bottom: 0px;
 }
 
 .hits-item {
@@ -1455,7 +1467,7 @@ input[type="password"]::placeholder {
   display: inline-block;
   vertical-align: middle;
   text-align: left;
-  margin-bottom: 42px;
+  margin-bottom: 41px;
   width: 1116px;
   padding-left: 20px;
   padding-right: 10px;
@@ -1529,12 +1541,13 @@ input[type="password"]::placeholder {
 .news-left {
   float: left;
   width: 540px;
-  min-height: 198px;
+  min-height: 168px;
   margin-right: 24px;
   background: #ffffff url("../img/bg-strawberry.jpg") repeat;
   color: #323232;
   padding-left: 20px;
   padding-top: 22px;
+  padding-bottom: 28px;
   border-radius: 15px;
 }
 
@@ -1561,11 +1574,11 @@ input[type="password"]::placeholder {
 .news-right {
   float: right;
   width: 508px;
-  min-height: 187px;
+  min-height: 160px;
   background: #f8f7f4 url("../img/bg-post.jpg") repeat;
   color: #323232;
   padding: 33px 26px;
-  padding-bottom: 0px;
+  padding-bottom: 25px;
   border-radius: 15px;
 }
 
