@@ -1988,6 +1988,10 @@ input[type="password"]::placeholder {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.modal-content-show {
+  display: block;
+}
+
 .modal-content-close {
   position: absolute;
   top: 15px;
